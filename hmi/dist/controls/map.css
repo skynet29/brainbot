@@ -1,0 +1,36 @@
+.MapViewControl {
+	display: flex;
+	flex-direction: row;
+}
+
+.MapViewControl .map {
+	flex: 1;
+}
+
+.MapViewControl .panelInfo {
+	width: 200px;
+	background-color: lightgrey;
+	padding: 10px;
+}
+
+.MapViewControl .panelInfo div {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.MapViewControl .myPopup .leaflet-popup-content {
+	margin: 5px;
+	font-size: 0.8em;
+}
+
+.MapViewControl .myPopup .leaflet-popup-content div {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.MapViewControl .myPopup .leaflet-popup-content-wrapper {
+	border-radius: 0px;
+	opacity: 0.8;
+}

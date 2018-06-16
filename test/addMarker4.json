@@ -1,0 +1,29 @@
+{
+	"shape": "marker",
+
+	"latlng": {
+		"lat":48.3583, 
+		"lng":-4.53417		
+	},
+
+	"rotationAngle": 0,
+
+	"icon": {
+		"type": "default"
+	},
+	"options": {
+		"title": "Portzic"
+	},
+	"popupContent": [
+		"<strong bn-text='name'></strong>",
+		{"label": "Distance", "prop": "distance"},
+		"<strong>Hello World</strong>",
+		{"label": "Heading", "prop": "heading"}
+	],
+	"props": {
+		"distance": 200,
+		"heading": 60,
+		"name": "Bus1"
+
+	}
+}

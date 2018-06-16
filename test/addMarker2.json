@@ -1,0 +1,19 @@
+{
+	"shape": "marker",
+
+	"latlng": {
+		"lat":48.3583, 
+		"lng":-4.53417		
+	},
+
+	"rotationAngle": 0,
+
+	"icon": {
+		"type": "font",
+		"className": "fa fa-bus",
+		"fontSize": 20
+	},
+	"options": {
+		"title": "Portzic"
+	}
+}

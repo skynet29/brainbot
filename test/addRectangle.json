@@ -1,0 +1,17 @@
+{
+	"shape": "rectangle",
+
+    "northWest": {
+        "lat": 48.36495551280889,
+        "lng": -4.580268859863282
+    },
+    "southEast": {
+        "lat": 48.346704406755784,
+        "lng": -4.555377960205079
+    },
+
+	"options": {
+		"color": "red",
+		"fill": false
+	}
+}

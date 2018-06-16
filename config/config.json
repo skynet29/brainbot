@@ -1,0 +1,88 @@
+{
+	"masterPort": 8090,
+	"masterHost": "127.0.0.1",
+	"masterBufferTimeout": 0,
+
+	"launcher": {
+		"logPath": "./logs",
+
+		"agents": {
+			"master": {"script": "master.js"},
+			"server": {"script": "hmi/server.js", "start": "auto"},
+			"shapeAgent": {"script": "agents/shapeAgent.js", "start": "manual"},			
+			"drone": {"script": "agents/drone.js", "start": "manual"},
+			"areaAgent": {"script": "agents/areaAgent.js", "start": "manual"},
+			"bus": {"script": "agents/vehicleproxy.js", "start": "manual"},
+			"bus2": {"script": "agents/vehicleproxy.js", "start": "manual"},
+			"route": {"script": "agents/zonesproxy.js", "start": "manual"},
+			"depot": {"script": "agents/depotsproxy.js", "start": "manual"},
+			"controler": {"script": "agents/controler.js", "start": "manual"},
+			"routeEd": {"script": "agents/routeeditor.js", "start": "manual"},
+			"depotEd": {"script": "agents/depoteditor.js", "start": "manual"},
+			"bebusStop": {"script": "agents/bebusStop.js", "start": "manual"},
+			"bebusLine": {"script": "agents/bebusLine.js", "start": "manual"},
+			"radar": {"script": "agents/radar.js", "start": "manual"},
+			"sumProvider": {"script": "agents/test/service/provider.js", "start": "manual"},
+			"parrot": {"script": "agents/parrot.js", "start": "manual"}
+		}
+	},
+
+	"server": {
+		"port": 9000,
+		"dbUrl": "mongodb://localhost:27017/reviews",
+		"mapPath": "C:/Users/T0009986/Documents/OSM/OSM"
+	},
+
+	"drone": {
+		"storeInFile": false,
+		"storeFileName": "bus2.json",
+		"warpFactor": 10,
+		"gyrSpeed": 8,
+		"captureRadius": 10,
+		"icon": {
+		 	"type": "ais"
+		}		
+	},
+
+	"bus": {
+		"fileName": "bus.json",	
+		"name": "bus1",			
+		"period": 1000,
+		"icon": {
+			"type": "font",
+		 	"className": "fa fa-bus",
+		 	"fontSize": 20
+		 }
+	},
+
+	"bus2": {
+		"fileName": "bus2.json",
+		"name": "bus2",	
+		"period": 100,
+		"icon": {
+			"type": "font",
+		 	"className": "fa fa-bus",
+		 	"fontSize": 20
+		}
+	},	
+
+	"routeEd": {
+		"fileName": "bus2.json",
+		"outFileName": "route2.json"
+
+	},
+
+
+	"depotEd": {
+		"fileName": "depot.json"
+	},	
+
+	"route": {
+		"fileName": "route.json"
+
+	},
+
+	"depot": {
+		"fileName": "depot.json"
+	}	
+}

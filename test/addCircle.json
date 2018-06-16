@@ -1,0 +1,13 @@
+{
+	"shape": "circle",
+	"latlng": {
+		"lat":48.4, 
+		"lng":-4.47		
+	},
+
+	"radius": 200,
+	"options": {
+		"title": "Brest",
+		"color": "red"
+	}
+}

@@ -1,0 +1,32 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #444444;
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.header a {
+	color: white;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+
+#main {
+
+	background-color: lightgrey;
+	padding: 10px;
+}
+
+.appIcon {
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+
+}

@@ -1,0 +1,106 @@
+{
+	"map": {
+		"attributionControl": false,
+		"zoomControl": true,
+		"center": [48.3583, -4.53417],
+		"zoom": 13		
+	},
+
+	"tileLayer": {
+		"maxZoom": 19,
+		"urlTemplate": "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+	},
+
+
+	"controls": {
+		"scale": {
+			"imperial": false,
+			 "position": "bottomright"
+		},
+
+		"coordinates": {
+			"position": "bottomleft",
+			"useLatLngOrder": true,
+			"enableUserInput": false,
+			"decimals": 5			
+		},
+
+		"layers": {
+			"mission": {"label": "Mission", "visible": true},
+			"default": {"label": "Default", "visible": true},
+			"vehicule": {"label": "Vehicule", "visible": true}
+		}
+
+		
+	},
+
+	"contextmenuItems": [
+		{
+			"text": "Init drone poistion",
+			"topic": "initPos"
+		},
+
+		{
+			"text": "Target",
+			"topic": "goTarget"
+		},
+		{
+			"text": "Start Bus",
+			"topic": "startBus"
+		},		
+		{
+			"separator": true
+		},
+		{
+			"text": "Center map here",
+			"action": "centerMap"
+		}				
+	],	
+
+	"plugins": {
+		"ShapeDecoder": {},
+		"ShapeEditor": {
+			"draw": {
+				"circle": {
+					"feet": false
+				},
+
+				"polyline": true,
+				"rectangle": true,
+				"marker": true
+
+			},
+			"edit": {
+				"featureGroup": "default"
+			}			
+		},
+		"CenterMap": {},
+		"CircularMenu": {
+
+			"menus": [
+				{"text": "\uf015", "action": "toto"},
+				{"text": "\uf099", "color": "blue"}
+				],
+			"triggerPos": {
+				"left": 200,
+				"top": 200
+			}
+				
+		}, 
+		"ObjectCircularMenu": {
+
+			"menus": [
+				{"text": "Red", "color": "red"},
+				{"text": "Green", "color": "green"},
+				{"text": "Cyan", "color": "cyan"},
+				{"text": "Blue", "color": "blue"}
+				],
+
+			"innerRadius": 40,
+			"radius": 100,
+			"iconPos": 70
+				
+		}, 
+		"PanelInfo": {}
+	}
+}

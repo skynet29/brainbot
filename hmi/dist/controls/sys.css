@@ -1,0 +1,27 @@
+.UserDetailsControl td {
+	vertical-align: middle;
+}
+
+.UserDetailsControl .main {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.UserDetailsControl .main .info {
+	margin-bottom: 10px;
+}
+
+
+.UsersControl  a {
+	text-decoration: none;
+}
+
+.UsersControl form {
+	display: flex;
+}
+
+.UsersControl {
+	display: flex;
+	flex-direction: column;
+}

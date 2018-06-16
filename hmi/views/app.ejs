@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title><%= title %></title>
+        <meta name="viewport" content="width=device-width">
+        <% if (log === false) { %>
+            <script type="text/javascript">
+                console.log = function() {}
+            </script>
+        <% } %>
+        <script src="/externals.js"></script> 
+        <script src="/core.js"></script> 
+
+        <script src="/controls/core.js"></script> 
+        <script src="/services.js"></script> 
+
+        <% scripts.forEach(function(script) {%>
+            <script type="text/javascript" src="<%= script %>"></script>
+
+        <%}) %>        
+
+        <link rel="stylesheet" type="text/css" href="/css/externals.css">
+        <link rel="stylesheet" type="text/css" href="/css/common.css">
+
+        <link rel="stylesheet" type="text/css" href="/controls/core.css">
+        <% styles.forEach(function(style) {%>
+            <link rel="stylesheet" type="text/css" href="<%= style %>">
+
+        <%}) %>        
+    </head>
+
+    <body>
+        <div bn-control="HeaderControl" data-title="<%= title %>" data-user-name="<%= user %>"></div>
+
+    </body>
+</html>

@@ -1,0 +1,13 @@
+{
+	"latlng": {
+		"lat":48.4, 
+		"lng":-4.47		
+	},
+
+	"heading": 45,
+	"speed": 4,
+	"depth": 5,
+	"options": {
+		"color": "red"
+	}
+}

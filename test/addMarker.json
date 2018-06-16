@@ -1,0 +1,18 @@
+{
+	"shape": "marker",
+
+	"latlng": {
+		"lat":48.3583, 
+		"lng":-4.53417		
+	},
+
+	"rotationAngle": 30,
+
+	"icon": {
+		"type": "ais",
+		"color": "red"
+	},
+	"options": {
+		"title": "Portzic"
+	}
+}

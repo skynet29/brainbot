@@ -1,0 +1,116 @@
+
+
+.CircularMenuControl .item.active .sector {
+	fill: lightgrey;
+}
+
+
+
+.CircularMenuControl .item text {
+	font-size: 20px;
+	font-family: FontAwesome;
+}
+
+.CircularMenuControl .item rect {
+	stroke: none;
+}
+
+.CircularMenuControl .trigger .label {
+	font-size: 15px;
+	font-family: FontAwesome
+}
+.HeaderControl {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #444444;
+	color: white;
+	padding: 10px;
+}
+
+.HeaderControl .brand {
+	flex: 1;
+}
+
+.HeaderControl .brand h1 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.HeaderControl a {
+	color: white;
+}
+
+.HeaderControl .userName {
+	margin-right: 20px;
+	margin-left: 5px;
+}
+
+.HeaderControl .connectionState {
+	margin-right: 30px;
+}
+
+
+.UserDetailsControl td {
+	vertical-align: middle;
+}
+
+.UserDetailsControl .main {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.UserDetailsControl .main .info {
+	margin-bottom: 10px;
+}
+
+
+.UsersControl  a {
+	text-decoration: none;
+}
+
+.UsersControl form {
+	display: flex;
+}
+
+.UsersControl {
+	display: flex;
+	flex-direction: column;
+}
+.TacticViewControl {
+	display: flex;
+	flex-direction: row;
+}
+
+.TacticViewControl .map {
+	flex: 1;
+}
+
+.TacticViewControl .panelInfo {
+	width: 200px;
+	background-color: lightgrey;
+	padding: 10px;
+}
+
+.TacticViewControl .panelInfo div {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
+
+.TacticViewControl .myPopup .leaflet-popup-content {
+	margin: 5px;
+	font-size: 0.8em;
+}
+
+.TacticViewControl .myPopup .leaflet-popup-content div {
+	display: flex;
+	justify-content: space-between;
+
+}
+
+.TacticViewControl .myPopup .leaflet-popup-content-wrapper {
+	border-radius: 0px;
+	opacity: 0.8;
+}

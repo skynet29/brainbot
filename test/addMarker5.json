@@ -1,0 +1,21 @@
+{
+	"shape": "marker",
+
+	"latlng": {
+		"lat":48.3583, 
+		"lng":-4.53417		
+	},
+
+	"rotationAngle": 0,
+
+	"icon": {
+		"type": "milsymbol",
+		"size": 30,
+		"sidc": "SFG-UCI----D",
+		"name": "toto"		
+	},
+	"options": {
+		"title": "Portzic"
+	}
+
+}

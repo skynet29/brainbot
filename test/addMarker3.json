@@ -1,0 +1,18 @@
+{
+	"shape": "marker",
+
+	"latlng": {
+		"lat":48.3583, 
+		"lng":-4.53417		
+	},
+
+	"rotationAngle": 0,
+
+	"icon": {
+		"type": "default"
+	},
+	"options": {
+		"title": "Portzic"
+	},
+	"popupContent": "Hello World"
+}

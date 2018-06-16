@@ -1,0 +1,9 @@
+*.fossil
+.fossil-settings
+_FOSSIL_
+logs
+users
+hmi/src
+db
+
+

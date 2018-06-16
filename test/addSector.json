@@ -1,0 +1,14 @@
+{
+	"shape": "sector",
+	"latlng": {
+		"lat":48.4, 
+		"lng":-4.47		
+	},
+
+	"radius": 1000,
+	"direction": 45,
+	"size": 60,
+	"options": {
+		"color": "yellow"
+	}
+}
