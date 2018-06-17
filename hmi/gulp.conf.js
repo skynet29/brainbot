@@ -112,7 +112,7 @@ module.exports = {
 	},
 
 	'services': {
-		src: './src/services/*.js',
+		src: ['../lib/client.js', './src/services/*.js'],
 		options: {concat: 'services.js', to5: convertTo5},
 		watch: true
 	},
@@ -123,7 +123,10 @@ module.exports = {
 		watch: true
 	},
 	'core': {
-		src: ['./src/lib/*.js', '../lib/client.js'],
+		src: [
+		'./src/lib/**/*.js',
+		'!./src/lib/core2.js',
+		],
 		options: {concat: 'core.js', to5: convertTo5},
 		watch: true
 	},

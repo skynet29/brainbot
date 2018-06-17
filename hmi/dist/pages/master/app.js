@@ -4,3 +4,5 @@ $$.configReady(function () {
 	$$.startApp('MasterHistControl')
 
 })
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiJhcHAuanMiLCJzb3VyY2VzQ29udGVudCI6WyIkJC5jb25maWdSZWFkeShmdW5jdGlvbiAoKSB7XHJcblx0Y29uc29sZS5sb2coJ0FwcCBzdGFydGVkJylcclxuXHJcblx0JCQuc3RhcnRBcHAoJ01hc3Rlckhpc3RDb250cm9sJylcclxuXHJcbn0pXHJcbiJdfQ==
