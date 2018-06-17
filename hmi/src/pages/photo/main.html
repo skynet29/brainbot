@@ -1,0 +1,32 @@
+<div>
+	<div 
+		bn-control="FileControl" 
+		data-toolbar="false" 
+		data-image-only="true"
+		bn-event="fileClick: onFileClicked" 
+		bn-show="showFiles"
+		>			
+	</div>
+	<div 
+		bn-show="!showFiles" 
+		class="bn-flex-col bn-align-center"
+		>
+		<div style="width: 100%">
+			<button 
+				title="Back" 
+				class="backBtn" 
+				bn-event="click: onBackClicked"
+			>
+				<i class="fa fa-2x fa-arrow-circle-left"></i>
+			</button>
+		</div>
+		<div 
+			bn-control="PictureCarouselControl" 
+			bn-data="images: images, index: index" 
+			data-width="600" 
+			data-height="400" 
+			data-color="cyan"
+			>
+		</div>
+	</div>
+</div>

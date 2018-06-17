@@ -1,0 +1,24 @@
+<div class="bn-flex-col bn-flex-1" style="margin: 10px; align-items: center;">
+	<div bn-control="FlightPanelControl" bn-data="roll: roll, altitude:altitude, pitch: pitch, speed:speed" ></div>
+
+	<div class="bn-flex-1 bn-flex-col bn-margin-10" style="width: 100%">
+		<div class="bn-flex-row bn-align-center">
+			<span style="width: 80px">Speed</span>
+			<div class="bn-flex-1" bn-control="SliderControl" data-max="200" bn-val="speed" bn-update="input"></div>
+		</div>
+		<div class="bn-flex-row" style="align-items: center;" >
+			<span style="width: 80px">Roll</span>
+			<div class="bn-flex-1" bn-control="SliderControl" bn-val="roll" bn-update="input" data-min="-50" data-max="50"></div>
+		</div>
+		<div class="bn-flex-row" style="align-items: center;" >
+			<span style="width: 80px">Pitch</span>
+			<div class="bn-flex-1" bn-control="SliderControl" bn-val="pitch" bn-update="input" data-min="-40" data-max="40"></div>
+		</div>
+		<div class="bn-flex-row" style="align-items: center;" >
+			<span style="width: 80px">Altitude</span>
+			<div class="bn-flex-1" bn-control="SliderControl" bn-val="altitude" bn-update="input"></div>
+		</div>
+		
+	</div>
+	
+</div>

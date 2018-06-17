@@ -1,0 +1,22 @@
+<a-scene>
+	<a-assets>
+		<img id="city" src="/pages/test-aframe/assets/city.jpg">
+		<img id="sechelt" src="/pages/test-aframe/assets/sechelt.jpg">		
+		<img id="thumb-city" src="/pages/test-aframe/assets/thumb-city.jpg">		
+		<img id="thumb-sechelt" src="/pages/test-aframe/assets/thumb-sechelt.jpg">		
+
+	</a-assets>
+
+	<a-sky src="#city" radius="10" bn-bind="sky"></a-sky>
+
+	<a-entity layout="type: line; margin: 1.5" position="0 -1 -4" 
+		bn-event="click.item: onClick, mouseenter.item: onMouseEnter, mouseleave.item: onMouseLeave">
+		<a-plane height="1" width="1"  class="item" src="#thumb-sechelt" data-src="#sechelt"></a-plane>
+		<a-plane height="1" width="1" class="item" src="#thumb-city" data-src="#city"></a-plane>
+		<a-plane height="1" width="1" color="red" class="item" ></a-plane>
+	</a-entity>
+
+	<a-camera>
+		<a-cursor color="green" fuse="true"></a-cursor>
+	</a-camera>
+</a-scene>

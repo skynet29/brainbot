@@ -1,0 +1,12 @@
+.UsersControl  a {
+	text-decoration: none;
+}
+
+.UsersControl form {
+	display: flex;
+}
+
+.UsersControl {
+	display: flex;
+	flex-direction: column;
+}

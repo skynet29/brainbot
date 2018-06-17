@@ -1,0 +1,7 @@
+{
+	"scripts": ["/controls/map.js", "/controls/circular.js", "/leaflet.js", "/tween.js", "/milsymbol.js"],
+	"styles": ["/css/leaflet.css"],
+	"tileIcon": "fa fa-2x fa-globe",
+	"tileColor": "w3-red",
+	"title": "TacticView"
+}

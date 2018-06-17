@@ -1,0 +1,4 @@
+{
+	"scripts": ["/controls/flight.js", "/controls/ui.js", "/nodecopter-client.js"],
+	"styles": ["app.css"]
+}

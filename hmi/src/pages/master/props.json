@@ -1,0 +1,6 @@
+{
+	"tileIcon": "fa fa-database fa-2x",
+	"title": "Master Monitoring",
+	"scripts": ["/controls/sys.js"]
+
+}

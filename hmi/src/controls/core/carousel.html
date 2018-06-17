@@ -1,0 +1,26 @@
+<div class="container">
+	<div class="viewport">
+		<div class="items" bn-bind="items"></div>	
+	</div>
+	<div class="overlay">
+		<div>
+			<button 
+				bn-event="click: onLeft" 
+				bn-prop="hidden: leftDisabled"
+				>
+				<i class="fa fa-2x fa-chevron-circle-left"></i>
+			</button>			
+		</div>
+
+		<div>
+			<button 
+				bn-event="click: onRight" 
+				bn-prop="hidden: rightDisabled"
+			>
+				<i class="fa fa-2x fa-chevron-circle-right"></i>
+			</button>			
+		</div>
+
+	</div>
+
+</div>

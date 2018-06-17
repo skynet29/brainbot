@@ -1,0 +1,14 @@
+{
+	"styles": ["app.css"],
+	"scripts": [
+		"/controls/circular.js",
+		"/controls/flight.js",
+		"/controls/map.js",
+		"/controls/media.js",
+		"/controls/milsymbol.js",
+		"/controls/shapes.js",
+		"/controls/sys.js",
+		"/controls/ui.js"
+	],
+	"tileIcon": "fa fa-2x fa-question"
+}

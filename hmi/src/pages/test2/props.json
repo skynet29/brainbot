@@ -1,0 +1,4 @@
+{
+	"title": "MIL-STD-2525C",
+	"scripts": ["/controls/milsymbol.js", "/milsymbol.js"]
+}

@@ -1,0 +1,4 @@
+{
+	"scripts": ["/ol.js", "/milsymbol.js"],
+	"styles": ["app.css"]
+}

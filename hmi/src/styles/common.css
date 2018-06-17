@@ -1,0 +1,113 @@
+html, body {
+	height: 100%;
+	margin: 0;
+
+}
+
+
+
+body {
+	display: flex;
+	flex-direction: column;
+	background-color: lightgrey;
+
+	
+}
+
+
+
+.mainPanel {
+	padding: 10px;
+	flex: 1;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	
+
+}
+
+.scrollPanel {
+	overflow-y: auto;
+	flex: 1;
+	//height: 100%;
+	//border: 1px solid black;
+	background-color: white;
+}
+
+.bn-no-overflow {
+	overflow: hidden;
+}
+
+.bn-flex-col {
+	display: flex;
+	flex-direction: column;
+}
+
+.bn-flex-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.bn-space-between {
+	justify-content: space-between;
+}
+
+.bn-space-around {
+	justify-content: space-around;
+}
+
+.bn-flex-wrap {
+	flex-wrap: wrap;
+}
+
+.bn-align-center {
+	align-items: center;
+}
+
+.bn-margin-10 > div {
+	margin-bottom: 10px;
+}
+
+.bn-flex-1 {
+	flex: 1;
+}
+
+tr.bn-middle > td {
+	vertical-align: middle;
+}
+
+.bn-fill {
+	width: 100%;
+}
+
+.bn-no-corner {
+	border-radius: 0px;
+}
+
+.bn-no-padding {
+	padding: 0px;
+}
+
+.bn-no-margin {
+	margin: 0px;
+}
+
+.bn-container {
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 767px) {
+	.bn-xs-hide {
+		display: none;
+	}	
+}
+
+@media screen and (max-width: 991px) {
+	.bn-sm-hide {
+		display: none;
+	}	
+}
+
+button:focus {
+	outline: none;
+}

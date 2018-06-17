@@ -1,0 +1,104 @@
+<div class="bn-flex-col bn-flex-1">
+	<div class="toolbar" bn-show="showToolbar">
+		<button 
+			bn-event="click: onToggleSelMode" 
+			title="Select mode" 
+			bn-class="selected: selMode"
+			>
+				<i class="fa fa-2x fa-check"></i>
+		</button>
+
+		<button 
+			bn-event="click: onCancelSelection" 
+			title="Cancel selection"
+			bn-prop="disabled: !canCancel"  
+			>
+				<i class="fa fa-2x fa-times"></i>
+		</button>
+
+		<button 
+			bn-event="click: onDelete" 
+			bn-prop="disabled: !fileSelected" 
+			title="Delete selected files"
+			>
+				<i class="fa fa-2x fa-trash" ></i>
+		</button>
+
+		<button 
+			title="Cut" 
+			bn-event="click: onCut" 
+			bn-prop="disabled: !fileSelected"
+			>
+				<i class="fa fa-2x fa-cut" ></i>
+		</button>
+
+		<button 
+			title="Copy" 
+			bn-prop="disabled: !fileSelected" 
+			bn-event="click: onCopy"
+			>
+				<i class="fa fa-2x fa-copy" ></i>
+		</button>
+
+		<button 
+			title="Paste" 
+			bn-prop="disabled: !canPaste" 
+			bn-event="click: onPaste"
+			>
+				<i class="fa fa-2x fa-paste" ></i>
+		</button>
+
+		<button 
+			bn-event="click: onCreateFolder" 
+			title="New folder"
+			>
+				<i class="fa fa-2x fa-folder-open" ></i>
+		</button>
+		
+		<button 
+			title="Import file" 
+			bn-event="click: onImportFile"
+			>
+				<i class="fa fa-2x fa-upload" ></i>
+		</button>		
+
+	</div>
+	<div class="pathPanel">
+		Path:&nbsp;<span bn-text="rootDir"></span>
+	</div>
+
+	<div>
+		<button class="backBtn" bn-event="click: onBackBtn" title="Back" bn-show="backVisible">
+			<i class="fa fa-2x fa-arrow-circle-left"></i>
+		</button>		
+	</div>
+
+	<div bn-each="f of files" class="container" bn-event="click.folder: onFolder, click.file: onFile">
+		
+		<div class="thumbnail">
+				<a bn-if="f.isImage" href="#" bn-attr="title: f.size" class="file" bn-data="name: f.name">
+					<div>
+						<img bn-attr="src: f.imgUrl">
+					</div>
+					
+					<span bn-text="f.name"></span>
+				</a>			
+				<a bn-if="f.isDir" href="#" class="folder" bn-data="name: f.name">
+					<div>
+						<i class="fa fa-4x fa-folder-open w3-text-blue-grey"></i>
+					</div>
+					
+					<span bn-text="f.name"></span>
+				</a>
+				<a bn-if="f.isFile" href="#" bn-data="name: f.name" class="file" bn-attr="title: f.size">
+					<div>
+						<i class="fa fa-4x fa-file w3-text-blue-grey"></i>
+					</div>
+					
+					<span bn-text="f.name"></span>
+				</a>			
+			
+		</div>
+	</div>
+</div>
+

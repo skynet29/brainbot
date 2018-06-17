@@ -1,0 +1,23 @@
+<div class="bn-flex-col bn-flex-1">
+	<h2>Registered Users</h2>
+	<div class="scrollPanel">
+		<ul class="w3-ul w3-border w3-white" bn-each="user of users" bn-event="click.delete: onDeleteUser, click.user: onUserClicked" bn-bind="ul">
+			<li class="w3-bar" bn-data="user: user">
+				<span class="w3-button w3-right delete" title="Delete"><i class="fa fa-trash"></i></span>
+				<div class="w3-bar-item">
+					<a href="#" bn-text="user" class="user"></a>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div>
+		<form bn-event="submit: onAddUser">
+			<input type="text" placeholder="username" name="userName" required autocomplete="off" class="w3-input w3-border">
+			<button type="submit" class="w3-btn w3-blue w3-bar-item w3-right">Add</button>			
+
+		</form>
+	</div>	
+</div>
+
+		

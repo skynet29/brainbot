@@ -1,0 +1,30 @@
+.panel1 {
+	display: flex;
+}
+
+.panel1 > div {
+	flex: 1;
+}
+
+.FlightPanelControl {
+	//transform: scale(0.4);
+	//position: absolute;
+	top: -100px;
+	right: -170px;
+}
+
+.panel2 {
+	position: relative;
+	display: flex;
+	//width: 640px;
+}
+
+.panel2 > img {
+	margin: 0;
+	padding: 0;
+	width: 640px
+}
+
+
+
+

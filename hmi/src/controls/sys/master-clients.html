@@ -1,0 +1,18 @@
+<div class="scrollPanel">
+    <table class="w3-table-all w3-small">
+        <thead>
+            <tr class="w3-green">
+                <th>Name</th>
+                <th>Registered Topics</th>
+                <th>Registered Services</th>
+            </tr>
+        </thead>
+        <tbody bn-each="c of clients">
+			<tr>
+				<td bn-text="c.name"></td>
+				<td bn-html="c.topics"></td>
+                <td bn-html="c.services"></td>
+			</tr>        	
+        </tbody>
+    </table>
+</div>

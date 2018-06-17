@@ -1,0 +1,8 @@
+{
+	"title": "Agents Monitoring",
+	"desc": "Agent Monitoring",
+	"tileIcon": "fa fa-tasks fa-2x",
+	"log": true,
+	"scripts": ["/controls/sys.js"]
+
+}

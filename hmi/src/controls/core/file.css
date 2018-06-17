@@ -1,0 +1,86 @@
+
+.FileControl .thumbnail {
+	width: 100px;
+	//height: 200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid transparent;
+	margin: 10px;
+	justify-content: center;
+	overflow: hidden;
+	//background-color: white;
+	padding: 2px;
+}
+
+.FileControl .thumbnail > a  {
+	flex: 1;
+	text-decoration: none;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.FileControl .thumbnail  span {
+
+	word-break: break-all;
+}
+
+.FileControl .thumbnail  img {
+	max-width: 100%;
+	height: 60px;
+}
+
+.FileControl .container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.FileControl button {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+.FileControl .toolbar button {
+	border: 2px solid black;
+	border-radius: 50%;
+	background-color: transparent;
+	padding: 0;
+	width: 45px;
+	height: 45px;
+	text-align: center;
+}
+
+.FileControl button.selected {
+	background-color: black;
+	color: white;
+}
+
+.FileControl .pathPanel {
+	margin-bottom: 10px;
+}
+
+.FileControl .thumbnail.selected {
+	border: 2px solid cyan;
+}
+
+.FileControl .thumbnail.cuted {
+	border: 2px solid red;
+}
+
+.FileControl .toolbar {
+	margin-bottom: 30px;
+}
+
+.FileControl .toolbar > button {
+	margin-right: 10px;
+}
+
+.FileControl .toolbar > button:nth-child(2) {
+	margin-right: 40px;
+}
+
+.FileControl .toolbar > button:nth-child(6) {
+	margin-right: 40px;
+}

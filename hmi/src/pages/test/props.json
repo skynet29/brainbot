@@ -1,0 +1,5 @@
+{
+	"styles": ["app.css", "/controls/circular.css"],
+	"title": "Form Test",
+	"scripts": ["/controls/circular.js", "/tween.js"]
+}

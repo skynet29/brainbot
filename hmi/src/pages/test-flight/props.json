@@ -1,0 +1,3 @@
+{
+	"scripts": ["/controls/flight.js", "/controls/ui.js"]
+}

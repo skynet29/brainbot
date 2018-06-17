@@ -1,0 +1,4 @@
+$$.configReady(function() {
+
+	$$.startApp('MainControl')
+}) 

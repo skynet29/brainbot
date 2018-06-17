@@ -1,0 +1,33 @@
+<div class="bn-flex-col bn-flex-1">
+
+	<div bn-event="click.cmd: onCommand">
+		<div bn-control="ToolbarControl">
+			<button class="cmd" data-cmd="bold"><i class="fa fa-bold"></i></button>
+			<button class="cmd" data-cmd="italic"><i class="fa fa-italic"></i></button>
+			<button class="cmd" data-cmd="underline"><i class="fa fa-underline"></i></button>
+			<button class="cmd" data-cmd="strikeThrough"><i class="fa fa-strikethrough"></i></button>
+			<button class="cmd" data-cmd="foreColor" bn-menu="colorItems" bn-event="menuChange: onColorMenuChange"><i class="fa fa-pencil" bn-style="color: color"></i></button>
+		</div>
+		<div bn-control="ToolbarControl">
+			<button class="cmd" data-cmd="justifyLeft"><i class="fa fa-align-left"></i></button>
+			<button class="cmd" data-cmd="justifyCenter"><i class="fa fa-align-center"></i></button>
+			<button class="cmd" data-cmd="justifyRight"><i class="fa fa-align-right"></i></button>
+		</div>	
+		<div bn-control="ToolbarControl">
+			<button class="cmd" data-cmd="indent"><i class="fa fa-indent"></i></button>
+			<button class="cmd" data-cmd="outdent"><i class="fa fa-outdent"></i></button>
+		</div>	
+		<div bn-control="ToolbarControl">
+			<button class="cmd" data-cmd="insertHorizontalRule">hr</button>
+			<button class="cmd" data-cmd="formatBlock" data-cmd-arg="h1">h1</button>
+			<button class="cmd" data-cmd="formatBlock" data-cmd-arg="h2">h2</button>
+			<button class="cmd" data-cmd="formatBlock" data-cmd-arg="h3">h3</button>
+		</div>		
+		<div bn-control="ToolbarControl">
+			<button class="cmd" data-cmd="insertUnorderedList"><i class="fa fa-list-ul"></i></button>
+			<button class="cmd" data-cmd="insertOrderedList"><i class="fa fa-list-ol"></i></button>
+		</div>
+
+	</div>	
+	<div contenteditable="true" class="bn-flex-1 editor" bn-bind="editor"></div>
+</div>

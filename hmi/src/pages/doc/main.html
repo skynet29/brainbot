@@ -1,0 +1,15 @@
+<div class="main bn-flex-1 bn-flex-col">
+	<h3>Available Controls</h3>
+	<div class="scrollPanel" style="padding: 10px">
+		<div bn-each="l of libs">
+			<div>
+				<p>Library <strong bn-text="l.name"></strong></p>
+				<ul bn-each="c of l.ctrls">
+					<li><a bn-attr="href: c.url" bn-text="c.name"></a></li>
+				</ul>
+				
+			</div>
+		</div>
+	</div>
+
+</div>

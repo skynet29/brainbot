@@ -1,0 +1,35 @@
+.CarouselControl .items {
+	width: 100000px;
+	display: flex;
+	position: relative;
+}
+
+.CarouselControl .viewport {
+	overflow: hidden;
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
+}
+
+.CarouselControl .overlay {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	top: 0
+}
+
+.CarouselControl .overlay button {
+	margin: 10px;
+	padding: 0px;
+	border: none;
+	background: transparent;
+}
+
+.CarouselControl .container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}

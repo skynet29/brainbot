@@ -1,0 +1,5 @@
+{
+	"scripts": ["/leaflet.js", "/controls/sys.js", "/controls/shapes.js", "/controls/tactic.js"],
+	"styles": ["/css/leaflet.css", "/controls/tactic.css"],
+	"title": "Router Test"
+}

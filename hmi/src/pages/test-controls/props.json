@@ -1,0 +1,4 @@
+{
+	"scripts": ["/tree.js", "/controls/ui.js"],
+	"title": "Demo Controls"
+}

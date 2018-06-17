@@ -1,0 +1,50 @@
+<div>
+<div class="bn-flex-row">
+    <form bn-form="formData" bn-event="submit: onSubmit">
+        <p>Name: <input type="text" name="name"></p>
+        <p>Email: <input type="text" name="email"></p>
+        <p>Gender:
+            <ul bn-control="RadioGroupControl" name="gender" bn-event="input: onGenderChange">
+                <li><input type="radio" value="male" id="male"><label for="male">Male</label> </li>
+                <li><input type="radio" value="female" id="female"><label for="female">Female</label> </li>
+            </ul>
+        </p>
+        <p>Fruits:
+            <ul bn-control="CheckGroupControl" name="fruits" bn-event="input: onFruitsChange">
+                <li><input type="checkbox" value="orange">Orange </li>
+                <li><input type="checkbox" value="bananas">Bananas </li>
+                <li><input type="checkbox" value="apple">Apple </li>
+            </ul>
+        </p>
+        <p><button type="submit" class="w3-btn w3-blue">Submit</button></p>
+    </form>  
+    <div>
+        <pre bn-text="result"></pre>
+    </div>  
+</div>
+
+<div>
+    <h2>Name</h2>
+    <p bn-text="name"></p>
+    <h2>FullName</h2>
+    <p bn-text="fullName"></p>
+</div>
+
+<div>
+    <h2>Clients</h2>
+    <ul bn-each="client of clients">
+        <li bn-text="client"></li>
+    </ul>
+    <form bn-event="submit: addClient, input.field: onFieldChange">
+        <input class="field" type="text" name="name" placeholder="Name" required>
+        <input class="field" type="number" name="age" placeholder="Age" min="1" required>
+        <button type="submit" bn-prop="disabled: !canSubmit">New Client</button>
+    </form>
+</div>
+
+
+
+<div style="width:300px; height: 300px; border: 1px solid black;">
+    <div bn-control="CircularMenuControl" bn-options="options" data-radius="120" data-iconPos="80" data-innerRadius="40" bn-event="menuSelected: onMenuSelected"/>
+</div>
+</div>

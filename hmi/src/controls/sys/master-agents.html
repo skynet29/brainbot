@@ -1,0 +1,27 @@
+<div class="scrollPanel">
+    <table class="w3-table-all w3-small">
+        <thead>
+            <tr class="w3-green">
+                <th>Agent Name</th>
+                <th>Host Name</th>
+                <th>State</th>
+                <th>Pid</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody bn-each="a of agents" bn-event="click.actionStart: onActionStart, click.actionStop: onActionStop, click.actionStopForce: onActionStopForce">
+  			<tr>
+				<td bn-text="a.agent"></td>
+				<td bn-text="a.host"></td>
+				<td bn-text="a.state"></td>
+				<td bn-text="a.pid"></td>
+				<td bn-data="agent: a.agent">
+					<button class="actionStart w3-btn w3-blue" bn-show="a.start">Start</button>
+					<button class="actionStop w3-btn w3-blue"  bn-show="!a.start">Stop</button>
+					<button class="actionStopForce w3-btn w3-red" bn-show="!a.start">Kill</button>
+				</td>
+			</tr>      	
+
+        </tbody>
+    </table>
+</div>

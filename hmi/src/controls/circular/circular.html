@@ -1,0 +1,20 @@
+<svg bn-attr="width: width, height: height" class="circularMenu" style="position: absolute; z-index: 1000000; overflow: visible; cursor: context-menu">
+	<g bn-attr="transform: transform1">
+		<g class="items" data-svg-origin="0 0" bn-each="s of sectors" bn-event="click.item: onItemClicked">
+				<g class="item" data-svg-origin="0 0">
+					<g bn-attr="transform: s.transform1">
+						<path bn-attr="d: arcPath, fill: s.info.fill" class="sector" stroke="black"/>			
+						<g  bn-attr="transform: s.transform2">
+
+							<text bn-attr="fill: s.info.color" text-anchor="middle" alignment-baseline="middle" bn-text="s.info.text"></text>			
+						</g>
+					</g>
+				</g>			
+		</g>
+		<g class="trigger" bn-if="hasTrigger" bn-event="click: onTriggerClick">
+			<circle bn-attr="r: triggerRadius" fill="red" />
+			<text class="label" text-anchor="middle" alignment-baseline="middle" bn-text="triggerLabel"></text>
+		</g>
+		
+	</g>
+</svg>

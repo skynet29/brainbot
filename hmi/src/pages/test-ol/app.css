@@ -1,0 +1,9 @@
+.scale-line {
+  position: absolute;
+  top: 350px;
+}
+.ol-scale-line {
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+}

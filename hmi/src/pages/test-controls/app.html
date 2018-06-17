@@ -1,0 +1,119 @@
+<div id="main" style="padding: 10px" class="scrollPanel">
+
+	<h1>PictureCarouselControl</h1>
+	<div bn-control="PictureCarouselControl" data-animate-delay="1000" data-index="1" bn-data="images: images">
+
+	</div>
+
+	<h1>SliderControl</h1>
+	<p>Range: <span bn-text="range"></span></p>
+	<div bn-control="SliderControl" data-max="150" data-orientation="horizontal" data-range="false" bn-val="sliderValue" bn-update="input"></div>
+
+	<h1>DialogControl</h1>
+ 	<button bn-event="click: onOpenDialog">Open Dialog</button>
+ 	<div bn-control="DialogControl" title="Dialog" bn-iface="dialogCtrl" bn-options="dialogCtrlOptions">
+ 		<p>Hello World</p>
+ 	</div>
+
+ 	<h1>FormDialogController</h1>
+ 	<button bn-event="click: onCreateNewUser">Create new user</button>
+
+
+ 	<h1>AccordionControl</h1>
+ 	<div bn-control="AccordionControl" bn-options="accordionCtrlOptions">
+ 		<div title="Section 1">
+ 			<p>
+ 			Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+    		ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+    		amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+    		odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+	    	</p>
+ 		</div>
+	<div title="Section 2">
+ 			<p>    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+    suscipit faucibus urna.
+	    	</p>
+ 		</div>
+ 	 </div>
+
+
+	<h1>TabControl</h1>
+
+	<div bn-control="TabControl" bn-iface="tabCtrl" bn-event="activate: onTabCtrlActivate">
+		<div title="Circle">
+			<svg width="200" height="100">
+				<circle r="20" cx="100" cy="50"></circle>	
+			</svg>
+		</div>
+		<div title="Rectangle" data-removable="true">
+			<svg width="200" height="100">
+				<rect x="10" y="10" width="100" height="50"></rect>	
+			</svg>
+			
+		</div>
+	</div>
+
+	<button bn-event="click: onAddTab">Add Tab...</button>
+	<button bn-event="click: onRemoveSelTab">Remove selected Tab</button>
+
+	<h1>TreeControl</h1>
+	<div bn-control="TreeControl" bn-iface="treeCtrl" bn-event="activate: onTreeCtrlActivate, contextMenuAction: onTreeCtrlContextMenuAction" data-checkbox="true" bn-options="treeCtrlOptions">
+<!-- 		<ul>
+			<li class="folder">Node 1
+				<ul>
+					<li>Node 1.1</li>
+					<li>Node 1.2</li>
+				</ul>
+			</li>
+
+			<li>Node 2</li>
+		</ul>
+ -->	</div>
+
+ 	<button bn-event="click: onAddNode">Add Node...</button>
+ 	<button bn-event="click: onRemoveSelNode">Remove selected node</button>
+
+ 	<h1>ToolbarControl</h1>
+
+ 	<div bn-control="ToolbarControl">
+ 		<button title="Open" bn-event="click: onOpenFile"><i class="fa fa-folder-open"></i></button>
+
+ 		<button title="Cut"><i class="fa fa-cut"></i></button>
+ 		<button title="Copy"><i class="fa fa-copy"></i></button>
+ 		<button title="Paste"><i class="fa fa-paste"></i></button>
+		<select id="car-type">
+			<option>Compact car</option>
+			<option>Midsize car</option>
+			<option>Full size car</option>
+			<option>SUV</option>
+			<option>Luxury</option>
+			<option>Truck</option>
+			<option>Van</option>
+		</select> 		
+
+ 	</div>
+
+ 	<h1>DatePickerControl</h1>
+ 	<p>Date: <input type="text" bn-control="DatePickerControl" data-show-button-panel="true" bn-event="change: onDatePickerChange" bn-val="date"></p>
+
+ 	<h1>InputGroupControl</h1>
+ 	<div bn-control="InputGroupControl">
+ 		<label>Name</label>
+ 		<input type="text">
+ 	</div>
+
+ 	<h1>SpinnerControl</h1>
+ 	<p>
+ 		<label>Value</label>
+ 		<input type="number" bn-control="SpinnerControl" bn-event="spinstop: onSpinnerValueChange" value="5" max="10" step="0.01"> 		
+ 	</p>
+
+<!--  	<h1>TimeSpinnerControl</h1>
+ 	<p>
+ 		<label>Value</label>
+ 		<input bn-control="TimeSpinnerControl"> 		
+ 	</p> -->
+
+</div>

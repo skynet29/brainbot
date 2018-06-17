@@ -1,0 +1,63 @@
+<div>
+	<div class="panel1">
+		
+		<div bn-control="ToolbarControl" bn-event="click.cmd: onCmd">
+			<button class="cmd" data-cmd="takeoff">Take Off</button>
+			<button class="cmd" data-cmd="land" bn-show="!gamepadDetected">Land</button>		
+			<button class="cmd" data-cmd="disableEmergency">Recover</button>
+		</div>
+
+
+
+		<div>
+			<div>
+				Battery: <span bn-text="battery"></span>%
+			</div>
+				
+			<div>
+				Control State: <span bn-text="controlState"></span>
+			</div>
+				
+			<div>
+				Fly State: <span bn-text="flyState"></span>
+			</div>			
+			<div>
+				Action: <span bn-text="curAction"></span>
+			</div>	
+			<div>
+				Wait Landing: <span bn-text="waitLanding"></span>
+			</div>	
+		</div>
+
+		<div bn-each="v of axes" bn-show="gamepadDetected">
+			<div>
+				Axe : <span bn-text="v"></span>
+			</div>
+				
+		</div>
+	</div>
+
+		<div bn-control="ToolbarControl" bn-event="mousedown.cmd: onSpeedCmd, mouseup.cmd: onStop" bn-show="!gamepadDetected">
+			<button class="cmd" data-cmd="front">Front</button>
+			<button class="cmd" data-cmd="back">Back</button>
+			<button class="cmd" data-cmd="left">Left</button>
+			<button class="cmd" data-cmd="right">Right</button>
+			<button class="cmd" data-cmd="up">Up</button>
+			<button class="cmd" data-cmd="down">Down</button>
+			<button class="cmd" data-cmd="clockwise">Clockwise</button>
+			<button class="cmd" data-cmd="counterClockwise">Counter Clockwise</button>
+			
+		</div>
+
+	<div class="panel2">
+			
+			<div bn-control="FlightPanelControl" bn-data="roll: roll, pitch: pitch, altitude: altitude"></div>	
+
+			<img bn-attr="src: imgUrl">
+			<div bn-bind="dronestream"></div>
+	
+			
+			
+	</div>
+
+</div>

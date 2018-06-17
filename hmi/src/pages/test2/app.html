@@ -1,0 +1,33 @@
+<div>
+<p>Exemple:</p>
+<code>
+	<pre>
+		&lt;div bn-control="MilSymbolControl" data-size="40" data-sidc="SFG-UCIZ---B"&gt;
+	</pre>
+</code>
+<div bn-control="MilSymbolControl" data-size="60" data-sidc="SFG-UCIZ---B" data-unique-designation="toto"></div>
+<div class="bn-flex-row bn-flex-wrap" bn-each="s of symbols">
+	<div bn-control="MilSymbolControl" data-size="40" bn-data="sidc: s"></div>
+</div>
+
+<div class="bn-flex-row">
+	<div bn-event="input.field: onPropsChange">
+		<div class="bn-flex-row bn-space-between">
+			<label>Size:</label>
+			<input type="number" bn-val="size" name="size" class="field">
+		</div>
+		<div class="bn-flex-row bn-space-between">
+			<label>SIDC:</label>
+			<input type="text" bn-val="sidc" name="sidc" class="field">
+		</div>	
+		<div class="bn-flex-row bn-space-between">
+			<label>Unique designation:</label>
+			<input type="text" bn-val="uniqueDesignation" name="uniqueDesignation" class="field">
+		</div>		
+	</div>	
+
+	<div style="margin-left: 10px">
+		<div bn-control="MilSymbolControl" bn-data="sidc: sidc, size: size, uniqueDesignation: uniqueDesignation"></div>
+	</div>
+</div>
+</div>

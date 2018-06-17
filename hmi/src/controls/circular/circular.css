@@ -1,0 +1,21 @@
+
+
+.CircularMenuControl .item.active .sector {
+	fill: lightgrey;
+}
+
+
+
+.CircularMenuControl .item text {
+	font-size: 20px;
+	font-family: FontAwesome;
+}
+
+.CircularMenuControl .item rect {
+	stroke: none;
+}
+
+.CircularMenuControl .trigger .label {
+	font-size: 15px;
+	font-family: FontAwesome
+}

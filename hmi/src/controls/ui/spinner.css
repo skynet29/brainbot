@@ -1,0 +1,16 @@
+.SpinnerControl {
+    -moz-appearance: textfield;
+ 	padding: 1px;
+}
+
+.SpinnerControl:focus {
+	outline: none;
+}
+
+
+.SpinnerControl::-webkit-outer-spin-button,
+.SpinnerControl::-webkit-inner-spin-button
+ {
+	-webkit-appearance: none;
+	margin: 0;
+}

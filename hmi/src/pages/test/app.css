@@ -1,0 +1,19 @@
+form {
+	margin: 10px;
+}
+
+form ul {
+	list-style: none;
+}
+
+input:invalid {
+	border: 1px solid red;
+}
+
+input:valid {
+	border: 1px solid green;
+}
+
+input:focus {
+	outline: none;
+}
