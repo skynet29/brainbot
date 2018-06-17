@@ -127,7 +127,7 @@ module.exports = {
 		'./src/lib/**/*.js',
 		'!./src/lib/core2.js',
 		'!./src/lib/boot/*.js'],
-		options: {concat: 'view.js', to5: convertTo5},
+		options: {concat: 'view.js', to5: convertTo5, replace: {from: "$$", to: 'MDZ'}},
 		watch: true
 	},
 	'core': {

@@ -8,6 +8,7 @@ var injectHTML = require('gulp-inject-stringified-html')
 var to5 = require('gulp-6to5')
 var inject = require('gulp-inject-string')
 var sourcemaps = require('gulp-sourcemaps')
+var replace = require('gulp-replace')
 
 var fs = require('fs')
 var path = require('path')
@@ -29,6 +30,9 @@ function source(srcs, dist, options) {
 	if (options.to5 === true) {
 		stream = stream.pipe(to5())
 	}
+	if (typeof options.replace == 'object') {
+		stream = stream.pipe(replace(options.replace.from, options.replace.to))
+	} 
 	if (typeof options.concat == 'string') {
 		stream = stream.pipe(sourcemaps.init())
 		stream = stream.pipe(concat(options.concat))
