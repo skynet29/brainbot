@@ -836,12 +836,12 @@ return datepicker.regional.fr;
   }
 }();
 
-(function(){
+!function(){
 
 	
 	window.MDZ = {}
 
-})();
+}();
 
 MDZ.dialogController = function(title, options) {
 	var div = $('<div>', {title: title})
