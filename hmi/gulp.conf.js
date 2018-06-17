@@ -124,7 +124,6 @@ module.exports = {
 		'./externals/jquery-ui-1.12.1.custom/i18n/datepicker-fr.js',
 		'./externals/jquery-contextMenu/jquery.contextMenu.min.js',
 		'./externals/eventemitter2.js',
-		'./externals/notify.min.js',
 		'./src/lib/**/*.js',
 		'!./src/lib/core2.js',
 		'!./src/lib/boot/*.js'],
