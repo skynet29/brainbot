@@ -1,6 +1,6 @@
 (function(){
 
 	
-	window.$$ = {}
+	window.mdz = window.$$ = {}
 
 })();
