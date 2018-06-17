@@ -118,7 +118,16 @@ module.exports = {
 	},
 
 	'view': {
-		src: ['./externals/jquery.min.js', './src/lib/*.js', '!./src/lib/core2.js'],
+		src: [
+		'./externals/jquery.min.js',
+		'./externals/jquery-ui-1.12.1.custom/jquery-ui.min.js',
+		'./externals/jquery-ui-1.12.1.custom/i18n/datepicker-fr.js',
+		'./externals/jquery-contextMenu/jquery.contextMenu.min.js',
+		'./externals/eventemitter2.js',
+		'./externals/notify.min.js',
+		'./src/lib/**/*.js',
+		'!./src/lib/core2.js',
+		'!./src/lib/boot/*.js'],
 		options: {concat: 'view.js', to5: convertTo5},
 		watch: true
 	},
