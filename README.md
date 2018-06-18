@@ -59,8 +59,8 @@ var ctrl = MDZ.viewController('#main', {
     onClick: function(ev) {
       ctrl.setData({name: 'Quentin', color: 'green'})
       /* another solution, useful when modifying array attributs
-        this.name = 'Quentin'
-        this.color = 'green'
+        ctrl.model.name = 'Quentin'
+        ctrl.model.color = 'green'
         ctrl.update('name, color')
       */
     }
