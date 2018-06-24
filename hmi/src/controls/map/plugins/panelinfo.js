@@ -19,7 +19,7 @@
 			var pos = obj.getLatLng()
 			var tooltip = obj.getTooltip()
 			//console.log('tooltip', tooltip)
-			panelInfo.processTemplate({
+			panelInfo.updateTemplate(ctx, {
 				lat: pos.lat.toFixed(5),
 				lng: pos.lng.toFixed(5),
 				label: obj.userData.label || obj.fullId
@@ -30,7 +30,7 @@
 		panelInfo.append(getInfoTemplate('Label', '', 'label'))
 		panelInfo.append(getInfoTemplate('Latitude', 0, 'lat'))
 		panelInfo.append(getInfoTemplate('Longitude', 0, 'lng'))
-
+		var ctx = panelInfo.processTemplate()
 
 
 		map.on('zoomend', () => {

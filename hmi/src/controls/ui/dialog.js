@@ -5,19 +5,17 @@ $$.registerControlEx('DialogControl', {
 		options.appendTo = elt.parent()
 		options.modal = true
 
-		var iface = {
-			open: function() {
-				elt.dialog('open')
-			},
+		this.open = function() {
+			elt.dialog('open')
+		}
 
-			close: function() {
-				elt.dialog('close')
-			},
+		this.close = function() {
+			elt.dialog('close')
+		}
 
-			setOption(optionName, value) {
-				elt.dialog('option', optionName, value)
-			}
-		}			
+		this.setOption = function(optionName, value) {
+			elt.dialog('option', optionName, value)
+		}
 
 
 		for(var btn in options.buttons) {
@@ -29,7 +27,6 @@ $$.registerControlEx('DialogControl', {
 
 		elt.dialog(options)
 
-		return iface
 	}
 });
 

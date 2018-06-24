@@ -55,6 +55,7 @@
 
 
 			function onMessage(msg) {
+				//console.log('onMessage')
 				ctrl.scope.iface.addItem(msg.topic, getItemData(msg))
 				updateTopicNumber()			
 			}
@@ -79,10 +80,8 @@
 				}
 			}
 
-			return {
-				dispose: function() {
-					client.unregister('**', onMessage)
-				}
+			this.dispose = function() {
+				client.unregister('**', onMessage)
 			}
 		}
 

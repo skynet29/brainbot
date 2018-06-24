@@ -1,29 +1,44 @@
 {
-  "name": "app",
+  "name": "brainbot",
   "version": "1.0.0",
-  "description": "POC TacticView",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./launcher.js"
+  "description": "A nodejs based javascript framework to pilot robot.",
+  "main": "launcher.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   },
-  "author": "M. DELOMEZ",
-  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skynet29/brainbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skynet29/brainbot/issues"
+  },
+  "homepage": "https://github.com/skynet29/brainbot#readme",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "ejs": "^2.5.6",
-    "express": "^4.15.3",
-    "express-session": "^1.15.3",
-    "jquery": "^3.2.1",
-    "jquery-ui": "^1.12.1",
-    "leaflet": "^1.1.0",
-    "leaflet-draw": "^0.4.9",
+    "body-parser": "^1.18.3",
+    "connect-mongodb-session": "^2.0.3",
+    "ejs": "^2.6.1",
+    "eventemitter2": "^5.0.1",
+    "express": "^4.16.3",
+    "express-fileupload": "^0.4.0",
+    "express-session": "^1.15.6",
+    "forever-monitor": "^1.7.1",
+    "mongodb": "^3.0.10",
     "nodejs-websocket": "^1.7.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-6to5": "^3.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-uglify": "^3.0.0",
-    "json-server": "^0.10.3"
+    "gulp-inject-string": "^1.1.1",
+    "gulp-inject-stringified-html": "^1.0.3",
+    "gulp-replace": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.4"
   }
 }

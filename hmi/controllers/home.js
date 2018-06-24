@@ -11,9 +11,10 @@ module.exports = function(app) {
 
 		const user = req.session.user
 		const allowedApps = req.session.allowedApps
-		//console.log('allowedApps', allowedApps)
+		//console.log('session', req.session)
 
 		sys.readConfig().then(function(infos) {
+			//console.log('infos', infos)
 			var appInfos = {}
 			for(var k in allowedApps) {
 				if (k in infos) {
@@ -25,6 +26,7 @@ module.exports = function(app) {
 			//console.log('allowedAppsConfig', appInfos)
 
 			res.render('home', {user: user, appInfos})	
+			console.log('renderHome OK')
 
 		})
 

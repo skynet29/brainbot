@@ -25,16 +25,14 @@ $$.registerControlEx('PictureCarouselControl', {
 			}
 		})
 
-		return {
-			setImages: function(value) {
-				//console.log('[PictureCarouselControl] setImages', value)
-				ctrl.setData('images', value)
-				ctrl.scope.carouselCtrl.refresh()			
-			},
-			setIndex: function(value) {
-				ctrl.setData('index', value)
-			}
-
+		this.setImages = function(value) {
+			//console.log('[PictureCarouselControl] setImages', value)
+			ctrl.setData('images', value)
+			ctrl.scope.carouselCtrl.refresh()			
+		},
+		this.setIndex = function(value) {
+			ctrl.setData('index', value)
 		}
+
 	}
 });

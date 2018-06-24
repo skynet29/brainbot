@@ -65,25 +65,27 @@
 				events.emit('itemAction', action, id)
 			})
 
-			function addItem(id, data) {
+			this.addItem = function(id, data) {
+
 				var itemData = $.extend({'_id': id}, data)
 				//console.log('addItem', itemData)
 				
 				if (datas[id] != undefined) {
 					var item = displayedItems[id]
 					if (item != undefined) {
-						item.processTemplate(itemData)
+						item.elt.updateTemplate(item.ctx, itemData)
 					}
 				}
 				else if (isInFilter(data)){
-					var item = $(itemTemplate).processTemplate(itemData)
-					displayedItems[id] = item
-					tbody.append(item)
+					var elt = $(itemTemplate)
+					var ctx = elt.processTemplate(itemData)
+					displayedItems[id] = {elt, ctx}
+					tbody.append(elt)
 				}
 				datas[id] = data
 			}
 
-			function removeItem(id) {
+			this.removeItem = function(id) {
 				//console.log('removeItem', id)
 				if (datas[id] != undefined) {
 					delete datas[id]
@@ -95,7 +97,7 @@
 				}			
 			}
 
-			function removeAllItems() {
+			this.removeAllItems = function() {
 				//console.log('removeAllItems')
 				datas = {}
 				displayedItems = {}
@@ -112,7 +114,7 @@
 				return ret
 			}
 
-			function setFilters(filters) {
+			this.setFilters = function(filters) {
 				_filters = filters
 				dispTable()
 			}
@@ -125,9 +127,10 @@
 					var data = datas[id]
 					if (isInFilter(data)) {
 						var itemData = $.extend({'_id': id}, data)
-						var item = $(itemTemplate).processTemplate(itemData)			
-						items.push(item)
-						displayedItems[id] = item
+						var elt = $(itemTemplate)
+						var ctx = elt.processTemplate(itemData)			
+						items.push(elt)
+						displayedItems[id] = {elt, ctx}
 					}
 
 				}
@@ -136,11 +139,11 @@
 				tbody.empty().append(items)
 			}
 
-			function getDatas() {
+			this.getDatas = function() {
 				return datas
 			}
 
-			function getDisplayedDatas() {
+			this.getDisplayedDatas = function() {
 				var ret = {}
 				for(let i in displayedItems) {
 					ret[i] = datas[i]
@@ -148,16 +151,9 @@
 				return ret
 			}
 
-			return {
-				addItem: addItem,
-				removeItem: removeItem,
-				removeAllItems: removeAllItems,
-				on: events.on.bind(events),
-				setFilters: setFilters,
-				getDatas: getDatas,
-				getDisplayedDatas: getDisplayedDatas,
-				options: options
-			}
+			this.on = events.on.bind(events)
+
+
 		}
 	})
 

@@ -68,12 +68,11 @@
 				ctrl.setData({agents: []})
 			}
 
-			return {
-				dispose: function() {
-					client.unregister('launcherStatus.*', onLauncherStatus)
-					//client.offEvent('disconnected', onDisconnected)
-				}
+			this.dispose = function() {
+				client.unregister('launcherStatus.*', onLauncherStatus)
+				//client.offEvent('disconnected', onDisconnected)
 			}
+			
 		}
 
 

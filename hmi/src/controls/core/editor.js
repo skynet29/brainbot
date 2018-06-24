@@ -52,13 +52,11 @@ $$.registerControlEx('HtmlEditorControl', {
 
 		})
 
-
-
-		return {
-			html: function() {
-				return ctrl.scope.editor.html()
-			}
+		this.html = function() {
+			return ctrl.scope.editor.html()
 		}
+
+
 	}
 
 });

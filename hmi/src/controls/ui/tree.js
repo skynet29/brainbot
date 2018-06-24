@@ -34,36 +34,30 @@ $$.registerControlEx('TreeControl', {
 
 		elt.fancytree(options)
 
-		function getActiveNode() {
+		this.getActiveNode = function() {
 			return elt.fancytree('getActiveNode')
 		}
 
-		function getRootNode() {
+		this.getRootNode = function() {
 			return elt.fancytree('getRootNode')
 		}
 
-		function moveDown(node) {
+		this.moveDown = function(node) {
 			var next = node.getNextSibling()
 			if (next != null) {
 				node.moveTo(next, 'after')
 			}
 		}
 
-		function moveUp(node) {
+		this.moveUp = function(node) {
 			var prev = node.getPrevSibling()
 			if (prev != null) {
 				node.moveTo(prev, 'before')
 			}
 		}
 
-		return {
-			getActiveNode: getActiveNode,
-			getRootNode: getRootNode,
-			on: events.on.bind(events),
-			moveUp: moveUp,
-			moveDown:  moveDown
+		this.on = events.on.bind(events)
 
-		}
 	}
 });
 

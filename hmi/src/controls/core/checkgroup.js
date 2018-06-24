@@ -5,7 +5,7 @@ $$.registerControlEx('CheckGroupControl', {
 			elt.trigger('input')
 		})
 
-		function getValue() {
+		this.getValue = function() {
 			var ret = []
 			elt.find('input[type=checkbox]:checked').each(function() {
 				ret.push($(this).val())
@@ -13,7 +13,7 @@ $$.registerControlEx('CheckGroupControl', {
 			return ret	
 		}
 
-		function setValue(value) {
+		this.setValue = function(value) {
 			if (Array.isArray(value)) {
 				elt.find('input[type=checkbox]').each(function() {
 					$(this).prop('checked', value.indexOf($(this).val()) >= 0)
@@ -21,10 +21,6 @@ $$.registerControlEx('CheckGroupControl', {
 			}		
 		}
 
-		return {
-			getValue: getValue,
-			setValue: setValue
-		}
 	}
 
 });

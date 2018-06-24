@@ -3,7 +3,7 @@
 const ws = require("nodejs-websocket")
 var config = require('./config/config.json')
 
-const EventEmitter2 = require('EventEmitter2').EventEmitter2
+const EventEmitter2 = require('eventemitter2').EventEmitter2
 config = Object.assign({masterBufferTimeout: 50}, config)
 
 //const bufferTimeout = config.masterBufferTimeout || 50

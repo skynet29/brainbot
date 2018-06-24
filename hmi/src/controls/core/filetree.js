@@ -51,18 +51,17 @@ $$.registerControlEx('FileTreeControl', {
 			}			
 		})
 
-		return {
-			getValue: function() {
-				return getNodePath(ctrl.scope.treeCtrl.getActiveNode())
-			},
+		this.getValue = function() {
+			return getNodePath(ctrl.scope.treeCtrl.getActiveNode())
+		},
 
-			refresh: function() {
-				const root = ctrl.scope.treeCtrl.getRootNode().getFirstChild()
-				if (root) {
-					root.load(true)
-				}
+		this.refresh = function() {
+			const root = ctrl.scope.treeCtrl.getRootNode().getFirstChild()
+			if (root) {
+				root.load(true)
 			}
 		}
+		
 	}
 
 });

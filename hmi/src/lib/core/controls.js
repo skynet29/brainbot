@@ -35,14 +35,14 @@ $$.createControl = function(controlName, elt) {
 		//console.log('createControl', controlName, ctrl)
 		if (ctrl.status ===  'ok') {
 			
-			var iface
+			var iface = {}
 
 			
 			if (typeof ctrl.fn == 'function') {
 				var args = [elt].concat(ctrl.deps)
 				var copyOptions = $.extend(true, {}, elt.getOptions())
 				console.log(`[Core] instance control '${controlName}'`)
-				iface = ctrl.fn.apply(null, args) || {}	
+				ctrl.fn.apply(iface, args)	
 				iface.options = copyOptions
 							
 			}
@@ -73,7 +73,7 @@ $$.createControl = function(controlName, elt) {
 
 					var args = [elt, options].concat(ctrl.deps)
 					console.log(`[Core] instance control '${controlName}' with options`, options)
-					iface = init.apply(ctx, args) || {}
+					init.apply(iface, args)
 					iface.options = copyOptions
 					iface.events = ctrl.fn.events
 

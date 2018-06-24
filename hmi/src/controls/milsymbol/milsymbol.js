@@ -28,30 +28,24 @@ $$.registerControlEx('MilSymbolControl', {
 			.appendTo(elt)
 
 
-		function setSize(size) {
+		this.setSize = function(size) {
 			data.size = size
 			symbol.setOptions({size: size})
 			img.attr('src', symbol.toDataURL())
 		}
 
-		function setUniqueDesignation(uniqueDesignation) {
+		this.setUniqueDesignation = function(uniqueDesignation) {
 			data.uniqueDesignation = uniqueDesignation
 			symbol.setOptions({uniqueDesignation: uniqueDesignation})
 			img.attr('src', symbol.toDataURL())
 		}
 
-		function setSIDC(sidc) {
+		this.setSIDC = function(sidc) {
 			data.sidc = sidc
 			symbol = createSymbolCode()
 			img.attr('src', symbol.toDataURL())
 		}
 
-		return {
-			setSIDC,
-			setSize,
-			setUniqueDesignation
-
-		}
 
 	}
 });

@@ -1,19 +1,21 @@
 
-var dbClient = require('mongodb').MongoClient
-var db = null
-
+var MongoClient = require('mongodb').MongoClient
+var _db = null
+const dbName = 'reviews'
 
 module.exports = {
 
 	open: function(dbUrl) {
+		console.log('db.open', dbUrl)
 		return new Promise((resolve, reject) => {
-			dbClient.connect(dbUrl, (err, db) => {
+			MongoClient.connect(dbUrl, (err, client) => {
+				console.log('db result', err)
 				if (err) {
 					reject(err)
 					return
 				}
 
-				this.db = db
+				_db = client.db(dbName)
 				resolve()
 
 			})			
@@ -23,7 +25,7 @@ module.exports = {
 	},
 
 	getCollection(name) {
-		return this.db.collection(name)
+		return _db.collection(name)
 	}
 
 }

@@ -43,6 +43,7 @@ function renderApp(appName, user, res) {
 
 		
 		res.render('app', data)
+		console.log('renderApp OK')
 	})
 
 }

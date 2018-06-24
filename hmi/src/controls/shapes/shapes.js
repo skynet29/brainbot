@@ -116,13 +116,12 @@
 			}
 
 
-			return {
-				viewCtrl: ctrl,
-				dispose: function() {
-					console.log('[TacticShapesControl] dispose !!')
-					client.unregister('mapViewAddShape.*.*', onTacticViewAddShape)
-				}
+
+			this.dispose = function() {
+				console.log('[TacticShapesControl] dispose !!')
+				client.unregister('mapViewAddShape.*.*', onTacticViewAddShape)
 			}
+			
 		}
 
 	})

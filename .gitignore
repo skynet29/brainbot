@@ -1,6 +1,7 @@
 *.fossil
 .fossil-settings
 _FOSSIL_
+node_modules
 logs
 users
 db

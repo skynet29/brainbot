@@ -8,6 +8,8 @@ var globalConfig = require('./config/config.json')
 const name = `launcher.${hostName}`
 const client = new Client(name, globalConfig)
 
+var sigInt = false
+
 
 if (!('launcher' in globalConfig)) {
 	console.error('no laucnher config !')
@@ -89,6 +91,13 @@ function startAgent(agentName) {
 		//var newState = (agentsState[agentName].state == "stoping") ? "stop" : "crashed"
 		agentsState[agentName] = {state:newState, pid: 0}
 		sendStatus()
+		if (sigInt === true) {
+			var nbRunningAgents = getRunningAgents().length
+			console.log('remaining agent to stop', nbRunningAgents)
+			if (nbRunningAgents == 0) {
+				process.exit(0)
+			}
+		}
 	})
 
 	child.on('start', function(process, data) {
@@ -101,8 +110,29 @@ function startAgent(agentName) {
 	sendStatus()
 }
 
+function getRunningAgents() {
+	var ret = []
+	for(agentName in agentsState) {
+		var info = agentsState[agentName]
+		if (info.pid != 0) {
+			ret.push(agentName)
+		}
+	}	
+	return ret
+}
+
+function stopAllRunningAgents() {
+	console.log('stopAllRunningAgents')
+	for(agentName in agentsState) {
+		var info = agentsState[agentName]
+		if (info.pid != 0) {
+			stopAgent({agent: agentName, force: true})
+		}
+	}
+}
 
 function stopAgent(data) {
+	console.log('stopAgent', data)
 	var agentName
 	var force = false
 
@@ -180,3 +210,8 @@ client.connect()
 function sendStatus() {
 	client.emit(`launcherStatus.${hostName}`, agentsState)
 }
+
+process.on('SIGINT', function() {
+	stopAllRunningAgents()
+	sigInt = true
+})

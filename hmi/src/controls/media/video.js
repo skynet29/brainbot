@@ -27,7 +27,7 @@
 				} 
 			})
 
-			function takePicture() {
+			this.takePicture = function() {
 			    canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
 			    return canvas.toDataURL('image/png');
 			}
@@ -45,9 +45,7 @@
 				ctrl.setData('message', err.name)
 			})	
 
-			return {
-				takePicture
-			}	
+	
 		}
 	})
 

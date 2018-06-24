@@ -38,21 +38,17 @@ $$.registerControlEx('SliderControl', {
 
 		elt.slider(options)
 
-		function getValue() {
+		this.getValue = function() {
 			//console.log('[SliderControl] getValue')
 			return elt.slider((options.range) ? 'values' : 'value') 
 		}
 
-		function setValue(value) {
+		this.setValue = function(value) {
 			//console.log('[SliderControl] setValue')
 			elt.slider((options.range) ? 'values' : 'value', value)
 		}
 
 
-		return {
-			getValue,
-			setValue
-		}
 	}
 
 });

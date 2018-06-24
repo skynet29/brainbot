@@ -28,7 +28,7 @@
 			var idx
 
 
-			function refresh() {
+			this.refresh = function() {
 				//console.log('[CarouselControl] refresh')
 				items = elt.children('div').remove().css('width', width).css('height', height)		
 
@@ -69,7 +69,7 @@
 
 			}		
 
-			function setIndex(index) {
+			this.setIndex = function(index) {
 				console.log('[CarouselControl] setIndex', index)
 				idx =  Math.max(0, Math.min(index, items.length))
 				ctrl.scope.items.css('left', (-idx * options.width) + 'px')
@@ -84,15 +84,8 @@
 				})
 			}		
 
-	 		refresh()
+	 		this.refresh()
 
-			return {
-				setIndex,
-				refresh: refresh,
-	/*			params: function() {
-					return {index: idx}
-				}*/
-			}
 		}
 
 	})

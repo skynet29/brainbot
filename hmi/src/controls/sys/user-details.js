@@ -37,7 +37,7 @@
 
 			})
 
-			function setUser(id) {
+			this.setUser = function(id) {
 				console.log('[UserDetailsControl] setUser', id)
 				user = id
 				getUserDetails(id)
@@ -90,14 +90,11 @@
 				})			
 			}
 
-			return {
-				setUser: setUser,
-				getUser: function() {
-					return user
-				},
-				hide: function() {
-					ctrl.setData({visible: false})
-				}
+			this.getUser = function() {
+				return user
+			},
+			this.hide = function() {
+				ctrl.setData({visible: false})
 			}
 		}
 

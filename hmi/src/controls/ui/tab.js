@@ -30,7 +30,7 @@ $$.registerControlEx('TabControl', {
 			elt.tabs('refresh')
 		})
 
-		function addTab(title, options) {
+		this.addTab = function(title, options) {
 			options = options || {}
 			var tab = $('<div>').html(options.template).appendTo(elt)
 			var id = tab.uniqueId().attr('id')
@@ -42,24 +42,20 @@ $$.registerControlEx('TabControl', {
 			elt.tabs('refresh')
 		}
 
-		function getSelectedTabIndex() {
+		this.getSelectedTabIndex = function() {
 			var index = ul.children('li.ui-state-active').index()
 			return index
 		}
 
-		function removeTab(tabIndex) {
+		this.removeTab = function(tabIndex) {
 			var li = ul.children('li').eq(tabIndex)
 			var panelId = li.remove().attr('aria-controls')
 			$('#' + panelId).remove()
 			elt.tabs('refresh')
 		}
 
-		return {
-			addTab,
-			getSelectedTabIndex,
-			removeTab,
-			on: events.on.bind(events)
-		}
+		this.on = events.on.bind(events)
+
 	}
 });
 

@@ -52,9 +52,9 @@ $$.registerControlEx('UsersControl', {
 
 		loadUsers()
 
-		return {
-			on: events.on.bind(events)
-		}
+		this.on = events.on.bind(events)
+
+
 	}
 
 });

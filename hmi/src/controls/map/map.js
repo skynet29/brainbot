@@ -49,7 +49,7 @@
 			elt.append(getTemplate())
 
 
-			function dispose() {
+			this.dispose = function() {
 				console.log('[MapViewControl] dispose !!')
 				for(var k in pluginsInstance) {
 					var i = pluginsInstance[k]
@@ -567,14 +567,12 @@
 
 			configure(elt.getOptions())
 
-			return {
-				dispose,
-				updateShape,
-				removeShape,
-				on: events.on.bind(events),
-				getShapeInfo
+			this.updateShape = updateShape
+			this.removeShape = removeShape
+			this.on = events.on.bind(events)
+			this.getShapeInfo = getShapeInfo
 
-			}
+
 		}
 	})
 

@@ -10,20 +10,16 @@
 		})
 		
 
-		function getValue() {
+		this.getValue = function() {
 			return elt.find('input[type=radio]:checked').val()
 		}
 
-		function setValue(value) {
+		this.setValue = function(value) {
 			elt.find('input[type=radio]').each(function() {
 				$(this).prop('checked', value === $(this).val())
 			})			
 		}
 
-		return {
-			getValue: getValue,
-			setValue: setValue
-		}
 
 	})
 

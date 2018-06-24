@@ -37,11 +37,9 @@
 				ctrl.setData({clients: []})
 			}
 
-			return {
-				dispose: function() {
-					client.unregister('masterClients', onMasterClients)
-				}
-			}		
+			this.dispose = function() {
+				client.unregister('masterClients', onMasterClients)
+			}
 		}
 
 	})

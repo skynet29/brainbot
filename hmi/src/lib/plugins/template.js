@@ -238,16 +238,9 @@
 		return this
 	}
 
+
+
 	$.fn.processTemplate = function(data) {
-		//console.log('processTemplate', data)
-        var dirList = this.preProcessTemplate()
-        //console.log('dirList', dirList)
-
-        this.updateTemplate(dirList, data)
-        return dirList
-    }
-
-	$.fn.preProcessTemplate = function() {
 		//console.log('[Core] processTemplate')
 		var that = this
 
@@ -279,6 +272,9 @@
 			})
 		}
 
+		if (data) {
+			this.updateTemplate(dirList, data)
+		}
 				
 		return dirList
 

@@ -235,10 +235,8 @@ $$.registerControlEx('FileControl', {
 
 		loadData()
 
-		return {
-			getFiles: function() {
-				return ctrl.model.files
-			}
+		this.getFiles = function() {
+			return ctrl.model.files
 		}
 	}
 

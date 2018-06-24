@@ -325,31 +325,30 @@
 
 			render()
 
-			return {
-				setRoll: function(value) {
-					options.roll = value
-					rollRad = toRad(value)
-					render()				
-				},
-
-
-				setSpeed: function(value) {
-					options.speed = value
-					render()					
-				},
-				setPitch: function(value) {
-					options.pitch = value
-					pitchRad = toRad(value)
-					render()				
-				},
-
-				setAltitude: function(value) {
-					options.altitude = value
-					render()				
-				}
-
-
+			this.setRoll = function(value) {
+				options.roll = value
+				rollRad = toRad(value)
+				render()				
 			}
+
+
+			this.setSpeed = function(value) {
+				options.speed = value
+				render()					
+			},
+			
+			this.setPitch = function(value) {
+				options.pitch = value
+				pitchRad = toRad(value)
+				render()				
+			},
+
+			this.setAltitude = function(value) {
+				options.altitude = value
+				render()				
+			}
+
+			
 		}
 	})
 

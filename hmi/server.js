@@ -42,6 +42,7 @@ function dbReady() {
 	var store = new MongoDBStore(
 	  {
 	    uri: dbUrl,
+	    databaseName: 'reviews',
 	    collection: 'sessions'
 	  })
 
