@@ -31,7 +31,7 @@ HTML code
 
 Javascript code
 ````javascript
-var ctrl = new ViewController('#main', {
+var ctrl = MDZ.viewController('#main', {
   data: {
     name:'Marc'
   }
@@ -50,7 +50,7 @@ HTML code
 
 Javascript code
 ````javascript
-var ctrl = new ViewController('#main', {
+var ctrl = MDZ.viewController('#main', {
   data: {
     name:'Marc',
     color:'black'
@@ -59,8 +59,8 @@ var ctrl = new ViewController('#main', {
     onClick: function(ev) {
       ctrl.setData({name: 'Quentin', color: 'green'})
       /* another solution, useful when modifying array attributs
-        this.name = 'Quentin'
-        this.color = 'green'
+        ctrl.model.name = 'Quentin'
+        ctrl.model.color = 'green'
         ctrl.update('name, color')
       */
     }
@@ -72,7 +72,7 @@ As you can see, the event handler must be defined in the **events** attribut of 
 
 # Getting started
 
-To get started, see the examples on my codepen page https://codepen.io/collection/AKgVOW
+To get started, see the examples on <a href="https://codepen.io/collection/AKgVOW" target="_blank">my codepen page</a>  
 
 ViewController is based on the excellent jQuery library. jQuery is bundeled in the file view.js in the hmi/dist folder.
 
