@@ -245,6 +245,6 @@ The webapp (front end) uses my brainjs binding library based on a MVVM model (li
 
 In this model, the view is a HTML fragment, the controler is an object of type ViewController which allow to modify the model and update automatically the DOM HTML of the view.
 
-The front code uses a build system based on **GULP** nodejs tool. Mainly the tool is used to concatenate javascript or css files and to inject HTML fragment in javascript controller template field using gulp-inject directive.
+The front code uses a build system based on the task runner **GULP** nodejs tool. Mainly the tool is used to concatenate javascript or css files and to inject HTML fragment in javascript controller template field using gulp-inject directive.
 
 
