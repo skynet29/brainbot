@@ -5,7 +5,7 @@ At the origin, this framework was developped to pilot and control an underwater 
 
 ## Roadmap
 
-- Fullstack **Javascript** nodejs for daemon process, browser js for HMI (webapp)
+- Fullstack **JAVASCRIPT**: nodejs for daemon process, browser js for HMI (webapp)
 - Meta OS: set of processes which communicates each other through a soft bus (message broker)
 - distributed architecture
 - multi-application (like a smartphone)
