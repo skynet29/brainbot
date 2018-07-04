@@ -1,7 +1,7 @@
 ## Goal
 Create a framework based on WEB technologies to ease developpment of complex application.
 
-At the origin, this framework was developped to pilot and control an underwater drone 
+At the origin, this framework was developped to pilot and control an underwater drone. 
 
 ## Roadmap
 
@@ -231,7 +231,7 @@ At the begining of the file, we found the port and the host of the master. Then 
 
 ## Web Server
 
-The graphical part of the system use a classical WEB client/server technology.
+The graphical part of the system use a classical WEB client/server technology. All the code (front + back) are located in the **hmi** directory.
 
 The main goal of the server is:
 - handle the connection/deconnection of a user to the system (login)
