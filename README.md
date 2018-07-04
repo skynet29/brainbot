@@ -229,3 +229,14 @@ Example of file:
 
 At the begining of the file, we found the port and the host of the master. Then comes the configuration of the differents agents included the launcher.
 
+## Web Server
+
+The graphical part of the system use a classical WEB client/server technology.
+
+The main goal of the server is:
+- handle the connection/deconnection of a user to the system (login)
+- display the available application (webapp) of the connected user according to his rights
+- provide a REST API to manage the users (creation/deletion/update)
+- handle connection to the **Mongodb** database which stores the users and session informations
+
+The WEB server (server.js) is based on the nodejs **Express** module and its middleware.
