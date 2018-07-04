@@ -5,7 +5,7 @@ Create a framework based on WEB technologies to ease developpment of complexe ap
 
 ## Roadmap
 
-- Fullstack JS
+- Fullstack **Javascript**
 - Meta OS: set of processes which communicates each other through a soft bus (message broker)
 - distributed architecture
 - multi-application (like a smartphone)
