@@ -1,7 +1,9 @@
 # brainbot
 
 ## Goal
-Create a framework based on WEB technologies to ease developpment of complexe application
+Create a framework based on WEB technologies to ease developpment of complexe application.
+
+At the origin, this framework was developped to pilot and control an underwater drone 
 
 ## Roadmap
 
@@ -14,8 +16,8 @@ Create a framework based on WEB technologies to ease developpment of complexe ap
 - propose a Map component which can be driven by an external process
 
 ## Message Broker
-- Each process (named agent) connect to an unique proxy process named the master (which port and host are known)
-- An agent can publish data identified by a name (called a topic) to the master without knowing which processes can use it
+- Each process called agent connect to an unique proxy process called the master (which port and host are known)
+- An agent can publish data identified by a name (called a topic) to the master without knowing which processes uses it
 - An agent can subscribe to a topic
 - An agent can also provide a service identified by a name (like a RPC call) which return data
 - An agent can call a service from its name
