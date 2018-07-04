@@ -42,17 +42,15 @@ As you can see on the diagram above, a WEB page is seen as a normal agent.
 ````
 where:
 
-src is the name of the agent which emit the message
-
-type is the type of the message:
+- src is the name of the agent which emit the message
+- time is the date when the message was emitted (number of milliseconds since midnight Jan 1, 1970) 
+- type is the type of the message:
   - register,
   - unregister,
   - notif,
-  - cmd
-  
-topic is the topic name
-
-data is the payload which can be anything (string, number, object, etc...)
+  - cmd 
+- topic is the topic name
+- data is the payload which can be anything (string, number, object, etc...)
 
 ### Topic naming
 the topic name can use the dot notation (like a namespace)
@@ -148,5 +146,23 @@ The first argument of the node command is the javascript script code.
 
 
 The second one is the name of the agent which **MUST** be unique in the whole system. This name is also used to identify the agent configuration defined in the global configuration file. So you can create several agents which use the same javascript code but with different configuration which is really usefull.
+
+## System tools
+
+The framework provides severals tools to help you to manage and debug your system.
+
+### Peek tool
+
+This tool allow you to display all message emitted on a topic
+
+Usage:
+````shell
+node peek topic=[topicName] hist=[true | false]
+
+````
+where:
+- topicName is the name of the topc to spy
+- hist (optional)  allow to ask for the history (last message stored by the master)
+
 
 
