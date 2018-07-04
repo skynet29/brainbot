@@ -98,4 +98,45 @@ Example of payload:
 }
 
 ````
+## Create a new agent
+
+The creation of a new agent is eased by the use of the **agent.js** module available in the **lib** directory.
+
+### Example 1
+
+In this example, you create an agent which publishes a topic called gpsData every 5 seconds
+
+Create a new file named **gpsProvider.js** in the **agents** folder
+
+````javascript
+const agent  = require('../lib/agent')
+
+const config = agent.config
+
+agent.start()
+
+setInterval(function() {
+	agent.emit('gpsData', {lat: 48, lng: -4})
+}, 5000)
+
+````
+
+
+### Example 2
+
+In this example, you create an agent which subscribes to the gpsData topic published by the agent created in the previous example.
+
+Create a new file named **gpsReader.js** in the **agents** folder
+
+````javascript
+const agent  = require('../lib/agent')
+
+agent.register('gpsData', true, function(msg) {
+	console.log('Receive msg', msg)
+})
+
+agent.start()
+
+````
+Note that the agent ask for the topic history by passing **true** as the second argument of the **register** method
 
