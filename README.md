@@ -23,7 +23,7 @@ At the origin, this framework was developped to pilot and control an underwater 
 
 ![broker diagram](https://user-images.githubusercontent.com/27694866/42265347-99c79522-7f73-11e8-8675-76f324d3a38c.png)
 
-As you can see on the diagram above, a WEB page is seen as a normal agent (aka coded in Nodejs)
+As you can see on the diagram above, a WEB page is seen as a normal agent.
 
 ## Implementation
 
