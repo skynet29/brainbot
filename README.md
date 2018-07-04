@@ -1,5 +1,25 @@
 # brainbot
-A nodejs based javascript framework to pilot robot.
+
+# Goal
+Create a framework based on WEB technologies to ease developpment of complexe application
+
+# Some Ideas 
+
+- Fullstack JS
+- Meta OS: set of processes which communicates between them through a soft bus (message broker)
+- distributed architecture
+- multi-application (like a smartphone)
+- users management (acces rights)
+- HMI using components
+- propose a Map component which can be driven by an external process
+
+# Message Broker
+- Each process (named agent) connect to an unique proxy process named the master (which port and host are known)
+- An agent can publish data identified by a name (called a topic) to the master without knowing which processes can use it
+- An agent can subscribe to a topic
+- An agent can also provide a service identified by a name (like a RPC call) which return data
+- An agent can call a service from its name
+- Each agent has an unqiue name which identify it in the whole system
 
 # ViewController
 ViewController is a class for binding data model to a view (aka HTML)
