@@ -181,3 +181,52 @@ where:
 data and file are exclusives
 
 Note: the process returns after the topic was emitted
+
+### Launcher tool
+
+The launcher is a special tools which allow you to launch all the agents of your system included the master and the WEB server and to manage their state (running/stopped). This is also an agent which publishes and subscribes topics.
+
+To do that, the launcher use the JSON configuration file **config.json** defined in the **config** folder.
+For each declared agent, the configuration specified the script (javascript code), the host (optional)  where the agent has to run and the start mode (manual or automatic). See an exmple of configuration below.
+
+Usage:
+````shell
+node launcher
+
+````
+The launcher emits a topic **launcherStatus.HOST** upon each agent state changes (HOST is the machine hostname).
+
+
+The launcher also subscribes to 2 topics: **launcherStartAgent** and **launcherStopAgent** whose payload contains the name of the agent to start/stop.
+
+The launcher stores the logs of each running agent in the directory defined in its configuration (**logPath** field), one file par agent. The name of the file is the agent name.
+
+Note: Usually this tool is launch at the boot of the machine.
+
+## JSON Configuration file
+
+Example of file:
+
+````json
+{
+	"masterPort": 8090,
+	"masterHost": "localhost",
+	"launcher": {
+		"logPath": "./logs",
+		"agents": {
+			"master": {"script": "master.js"},
+			"gpsProvider": {"script": "agents/gpsProvider.js", "start": "manual"},
+			"shapeAgent": {"script": "agents/shapeAgent.js", "start": "manual"},	
+			"server": {"script": "server.js", "start": "auto"},
+		}
+	},
+	"server": {
+		"port": 9000,
+	 	"dbUrl" : " mongodb://localhost:27017/reviews "
+	},
+}
+
+````
+
+At the begining of the file, we found the port and the host of the master. Then comes the configuration of the differents agents included the launcher.
+
