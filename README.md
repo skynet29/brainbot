@@ -239,4 +239,5 @@ The main goal of the server is:
 - provide a REST API to manage the users (creation/deletion/update)
 - handle connection to the **Mongodb** database which stores the users and session informations
 
-The WEB server (server.js) is based on the nodejs **Express** module and its middleware.
+The WEB server (server.js) is based on the nodejs **Express** module and its middleware. It uses the EJS template engine to build the dynamic view (login, home, webapp skeleton).
+
