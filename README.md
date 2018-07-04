@@ -106,7 +106,7 @@ The creation of a new agent is eased by the use of the **agent.js** module avail
 
 In this example, you create an agent which publishes a topic called gpsData every 5 seconds
 
-Create a new file named **gpsProvider.js** in the **agents** folder
+Create a new file named **gpsProvider.js** with the following content in the **agents** folder
 
 ````javascript
 const agent  = require('../lib/agent')
@@ -126,7 +126,7 @@ setInterval(function() {
 
 In this example, you create an agent which subscribes to the gpsData topic published by the agent created in the previous example.
 
-Create a new file named **gpsReader.js** in the **agents** folder
+Create a new file named **gpsReader.js** with the following content in the **agents** folder
 
 ````javascript
 const agent  = require('../lib/agent')
