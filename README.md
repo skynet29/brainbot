@@ -19,18 +19,18 @@ At the origin, this framework was developped to pilot and control an underwater 
 - Each process called agent connect to an unique proxy process called the master (which port and host are known)
 - An agent can publish data identified by a name (called a topic) to the master without knowing which processes uses it
 - An agent can subscribe to a topic
-- An agent can also provide a service identified by a name (like a RPC call) which return data
+- An agent can also provide a service identified by a name (like a RPC call) which return data to the caller
 - An agent can call a service from its name
 - Each agent has an unqiue name which identify it in the whole system
 
 ![broker diagram](https://user-images.githubusercontent.com/27694866/42265347-99c79522-7f73-11e8-8675-76f324d3a38c.png)
 
-As you can see on the diagram above, a WEB page is like a normal agent
+As you can see on the diagram above, a WEB page is seen as a normal agent (aka coded in Nodejs)
 
 ## Implementation
 
-- The communication between an agent and the master uses the WebSocket protocol
-- The message are wrtitten in JSON format
+- The communication between an agent and the master uses the **WebSocket** protocol
+- The message are wrtitten in **JSON** format
 
 ### Message format
 ````javascript
