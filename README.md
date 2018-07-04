@@ -161,8 +161,23 @@ node peek topic=[topicName] hist=[true | false]
 
 ````
 where:
-- topicName is the name of the topc to spy
+- topicName is the name of the topic to spy
 - hist (optional)  allow to ask for the history (last message stored by the master)
 
+### Poke tool
 
+This tool allow you to emit a topic on the system
 
+Usage:
+````shell
+node poke topic=[topicName] data=[data] file=[fileName]
+
+````
+where:
+- topicName is the name of the topic to emit
+- data (optional) is the payload of the topic
+- file (optional) is the name (full path) of a JSON file containing the payload
+
+data and file are exclusives
+
+Note: the process returns after the topic was emitted
