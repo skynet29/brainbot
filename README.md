@@ -5,12 +5,12 @@ At the origin, this framework was developped to pilot and control an underwater 
 
 ## Roadmap
 
-- Fullstack **Javascript**
+- Fullstack **Javascript** nodejs for daemon process, browser js for HMI (webapp)
 - Meta OS: set of processes which communicates each other through a soft bus (message broker)
 - distributed architecture
 - multi-application (like a smartphone)
 - users management (acces rights)
-- HMI using components
+- webapp using components
 - propose a Map component which can be driven by an external process
 
 ## Message Broker
