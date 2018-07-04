@@ -75,7 +75,7 @@ When an agent subscribes to a topic, it can ask to receive the last stored messa
 
 The master is a process like other agent coded with Nodejs
 
-the port on which the master is listening as well as the host on which the master is running are defined in a global JSON configuration file: **config.json**
+the port on which the master is listening as well as the host on which the master is running are defined in a global JSON configuration file **config.json** located in the **config** directory.
 
 The master publish a topic named **masterClients** upon each connection/deconnection of an agent to the master.
 
@@ -120,7 +120,7 @@ setInterval(function() {
 }, 5000)
 
 ````
-
+Note that your agent can access to its configuration defined in the global configuration file by using the **config** field of the **agent** object.
 
 ### Example 2
 
@@ -139,4 +139,16 @@ agent.start()
 
 ````
 Note that the agent ask for the topic history by passing **true** as the second argument of the **register** method
+
+### launch an agent manually
+
+To launch the agent created in the example 1, tape the following command from the framework root directory:
+````shell
+node agents/gpsProvider.js gpsProvider
+````
+The first argument of the node command is the javascript script code.
+
+
+The second one is the name of the agent which **MUST** be unique in the whole system. This name is also used to identify the agent configuration defined in the global configuration file. So you can create several agents which use the same javascript code but with different configuration which is really usefull.
+
 
