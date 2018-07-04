@@ -6,7 +6,7 @@ Create a framework based on WEB technologies to ease developpment of complexe ap
 ## Roadmap
 
 - Fullstack JS
-- Meta OS: set of processes which communicates between them through a soft bus (message broker)
+- Meta OS: set of processes which communicates each other through a soft bus (message broker)
 - distributed architecture
 - multi-application (like a smartphone)
 - users management (acces rights)
@@ -24,6 +24,46 @@ Create a framework based on WEB technologies to ease developpment of complexe ap
 ![broker diagram](https://user-images.githubusercontent.com/27694866/42265347-99c79522-7f73-11e8-8675-76f324d3a38c.png)
 
 As you can see on the diagram above, a WEB page is like a normal agent
+
+## Implementation
+
+- The communication between an agent and the master uses the WebSocket protocol
+- The message are wrtitten in JSON format
+
+### Message format
+````javascript
+{
+    src:  string,
+    time: number,
+    type: string,
+    topic: string,
+    data: any
+}
+````
+where:
+
+src is the name of the agent which emit the message
+
+type is the type of the message:
+  - register,
+  - unregister,
+  - notif,
+  - cmd
+  
+topic is the topic name
+
+data is the payload which can be anything (string, number, object, etc...)
+
+### Topic naming
+the topic name can use the dot notation (like a namespace)
+
+For example **mapViewAddShape.default.circle_1** is a valid topic name
+
+## Topic subscription
+To subscribe to a topic, you can use wildcards (*)
+
+For example if an agent subscribes to the topic **mapViewAddShape.\*.\***, it will receive all topic matching this pattern
+
 
 # ViewController
 ViewController is a class for binding data model to a view (aka HTML)
