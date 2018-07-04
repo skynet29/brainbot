@@ -1,5 +1,3 @@
-# brainbot
-
 ## Goal
 Create a framework based on WEB technologies to ease developpment of complexe application.
 
