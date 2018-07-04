@@ -241,7 +241,7 @@ The main goal of the server is:
 
 The WEB server (server.js) is based on the nodejs **Express** module and its middleware. It uses the EJS template engine to build the dynamic view (login, home, webapp skeleton).
 
-The webapp (front end) uses my brainjs binding library based on an MVVM model (like angular, react or vue frameworks).
+The webapp (front end) uses my brainjs binding library based on a MVVM model (like angular, react or vue frameworks).
 
 In this model, the view is a HTML fragment, the controler is an object of type ViewController which allow to modify the model and update automatically the DOM HTML of the view.
 
