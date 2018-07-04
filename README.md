@@ -21,6 +21,8 @@ Create a framework based on WEB technologies to ease developpment of complexe ap
 - An agent can call a service from its name
 - Each agent has an unqiue name which identify it in the whole system
 
+![image](https://user-images.githubusercontent.com/27694866/42265347-99c79522-7f73-11e8-8675-76f324d3a38c.png)
+
 # ViewController
 ViewController is a class for binding data model to a view (aka HTML)
 
