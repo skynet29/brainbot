@@ -64,6 +64,40 @@ To subscribe to a topic, you can use wildcards (*)
 
 For example if an agent subscribes to the topic **mapViewAddShape.\*.\***, it will receive all topic matching this pattern
 
+## Topic persistence
+The master stores the last message for each topic
+
+When an agent subscribes to a topic, it can ask to receive the last stored message
+
+## Master
+
+The master is a process like other agent coded with Nodejs
+
+the port on which the master is listening as well as the host on which the master is running are defined in a global JSON configuration file: **config.json**
+
+The master publish a topic named **masterClients** upon each connection/deconnection of an agent to the master.
+
+
+The message payload contains a list of all agents connected to the master and for each agent the list of the registred topic
+
+Example of payload:
+````javascript
+{
+    "launcher": [
+            "launcherStartAgent",
+            "launcherStopAgent"
+        ],
+    "shapeAgent": [
+            "tacticViewCircleCreated"
+        ],
+    "bus": [
+            "startBus"
+        ]
+}
+
+````
+
+
 
 # ViewController
 ViewController is a class for binding data model to a view (aka HTML)
