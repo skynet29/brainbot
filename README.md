@@ -1,9 +1,9 @@
 # brainbot
 
-# Goal
+## Goal
 Create a framework based on WEB technologies to ease developpment of complexe application
 
-# Some Ideas 
+## Roadmap
 
 - Fullstack JS
 - Meta OS: set of processes which communicates between them through a soft bus (message broker)
@@ -13,7 +13,7 @@ Create a framework based on WEB technologies to ease developpment of complexe ap
 - HMI using components
 - propose a Map component which can be driven by an external process
 
-# Message Broker
+## Message Broker
 - Each process (named agent) connect to an unique proxy process named the master (which port and host are known)
 - An agent can publish data identified by a name (called a topic) to the master without knowing which processes can use it
 - An agent can subscribe to a topic
@@ -22,6 +22,8 @@ Create a framework based on WEB technologies to ease developpment of complexe ap
 - Each agent has an unqiue name which identify it in the whole system
 
 ![broker diagram](https://user-images.githubusercontent.com/27694866/42265347-99c79522-7f73-11e8-8675-76f324d3a38c.png)
+
+As you can see on the diagram above, a WEB page is like a normal agent
 
 # ViewController
 ViewController is a class for binding data model to a view (aka HTML)
