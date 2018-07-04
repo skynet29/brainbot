@@ -1,5 +1,5 @@
 ## Goal
-Create a framework based on WEB technologies to ease developpment of complexe application.
+Create a framework based on WEB technologies to ease developpment of complex application.
 
 At the origin, this framework was developped to pilot and control an underwater drone 
 
@@ -243,8 +243,8 @@ The WEB server (server.js) is based on the nodejs **Express** module and its mid
 
 The webapp (front end) uses my brainjs binding library based on an MVVM model (like angular, react or vue frameworks).
 
-In this model, the views are HTML fragment, the controler are an object of type ViewController qui allow to modify the model and update automatically the DOM HTML of the view.
+In this model, the view is a HTML fragment, the controler is an object of type ViewController which allow to modify the model and update automatically the DOM HTML of the view.
 
-The front code uses a build system based on **GULP** nodejs tool. Mainly the tool is used to concatenate javascript or css files adn to inject HTML fragment in javascript controller template field using gulp-inject directive.
+The front code uses a build system based on **GULP** nodejs tool. Mainly the tool is used to concatenate javascript or css files and to inject HTML fragment in javascript controller template field using gulp-inject directive.
 
 
