@@ -19,4 +19,7 @@ In theory a webapp should consist of one main control which itself consists of o
 
 ## Services
 
-Services are object which are instanciated automatically by the framework when first needed.
+Services are javascript object which are instanciated automatically by the framework when first needed.
+
+Services may be configured at webapp startup in the **configReady** function before any controls creation.
+
