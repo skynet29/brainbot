@@ -94,6 +94,6 @@ Note: the command **gulp watch** must be restarted each time you create a new fi
 
 To publish your webapp in the system, you have to tape the following command in a terminal window:
 ````shell
-npm install
+node install
 ````
 This command regenerate the **webapps.json** file located in the **config** directory. This file is used by the server to manage the webapps.
