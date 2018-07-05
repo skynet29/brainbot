@@ -46,11 +46,12 @@ To create a new Webapp, first create a new folder **helloWorldApp** in the **src
 In this directory, create a new javascript file (the name does not matter) with the following code:
 ````javascript
 $$.configReady(function(config) {
-  // setup your services here if needed
+  /* setup your services here if needed
   $$.configureService('MyService', {...})
+  */
   
   // start your main control here
-  $$.startApp('MainControl', {...})
+  $$.startApp('MainControl')
 })
 ````
 
