@@ -80,7 +80,7 @@ $$.registerControl('MainControl', function(elt) {
 
 Note: create a main control is not an obligation but is needed if you have to configure services.
 
-As you can see, the HTML fragment will be injected in the template field as a a string by the build system.
+As you can see, the HTML fragment will be injected in the **template** field as a string by the build system.
 
 To finish, start a terminal window and launch the build system:
 
@@ -88,7 +88,12 @@ To finish, start a terminal window and launch the build system:
 gulp watch
 ````
 
-In the **dist** folder, a **helloWorldApp** directory has been created with only one file **app.js** which the concatenation of all your javascript files.
+In the **dist** folder, a **helloWorldApp** directory has been created with only one file **app.js** which is the concatenation of all your javascript files.
 
 Note: the command **gulp watch** must be restarted each time you create a new file but not if you only edit existing files.
 
+To publish your webapp in the system, you have to tape the following command in a terminal window:
+````shell
+npm install
+````
+This command regenerate the **config.json** file located in the **config** directory. This is used by the server to manage the webapps.
