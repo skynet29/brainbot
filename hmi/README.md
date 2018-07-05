@@ -43,7 +43,7 @@ The sources of the common services library are located in the **src/services** d
 
 To create a new Webapp, first create a new folder **helloWorldApp** in the **src/pages** directory.
 
-In this directory, create a new javascript file with the following code:
+In this directory, create a new javascript file (the name does not matter) with the following code:
 ````javascript
 $$.configReady(function(config) {
   // setup your services here if needed
