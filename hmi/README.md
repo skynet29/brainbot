@@ -33,12 +33,61 @@ the sources of the front-end are located in the **src** directory.
 The **dist** folder is the result of the build which is based on GULP task runner.
 
 The sources of the Webapp are located in the **src/pages** directory.
+
 The sources of the common controls libraries are located in the **src/controls** directory.
+
 The sources of the common services library are located in the **src/services** directory.
 
 
 # Create a new Webapp
 
-To create a new Webapp, first create a new folder in the **src/pages** directory.
+To create a new Webapp, first create a new folder **helloWorldApp** in the **src/pages** directory.
 
 In this directory, create a new javascript file with the following code:
+````javascript
+$$.configReady(function(config) {
+  // setup your services here if needed
+  $$.configureService('MyService', {...})
+  
+  // start your main control here
+  $$.startApp('MainControl', {...})
+})
+````
+
+The only argument of the **configReady** function is a callback function which is called by the framework when the configuration of the webapp has been retrieved. The configuration point will be addressed later.
+
+Then create two others files for the MainControl:
+- a javascript one: **main.js** which will contain the view controler
+- a HTML fragment: **main.html**
+
+## main.js
+````javascript
+$$.registerControl('MainControl', function(elt) {
+  const ctrl = $$.viewController(elt, {
+    template: {gulp_inject: './main.html'},
+    data: {
+      title: 'Hello World'
+     }
+  })
+})
+````
+
+## main.html
+````html
+<h1 bn-text="title"></h1>
+````
+
+Note: create a main control is not an obligation but is needed if you have to configure services.
+
+As you can see, the HTML fragment will be injected in the template field as a a string by the build system.
+
+To finish, start a terminal window and launch the build system:
+
+````shell
+gulp watch
+````
+
+In the **dist** folder, a **helloWorldApp** directory has been created with only one file **app.js** which the concatenation of all your javascript files.
+
+Note: the command **gulp watch** must be restarted each time you create a new file but not if you only edit existing files.
+
