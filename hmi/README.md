@@ -15,6 +15,8 @@ Controls are javascript code whose goal is to manage a part of the HTML DOM.
 
 In theory a webapp should consist of one main control which itself consists of one or severals controls.
 
+Example of the system webapp users break down:
+
 ![mainctrl](https://user-images.githubusercontent.com/27694866/42309859-2928e10a-803a-11e8-825a-0fa97223f5c5.png)
 
 ## Services
