@@ -58,7 +58,7 @@ $$.configReady(function(config) {
 The only argument of the **configReady** function is a callback function which is called by the framework when the configuration of the webapp has been retrieved. The configuration point will be addressed later.
 
 Then create two others files for the MainControl:
-- a javascript one: **main.js** which will contain the view controler
+- a javascript one: **main.js** which will contain the view controler code
 - a HTML fragment: **main.html**
 
 ## main.js
