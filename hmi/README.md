@@ -97,3 +97,6 @@ To publish your webapp in the system, you have to tape the following command in 
 node install
 ````
 This command regenerate the **webapps.json** file located in the **config** directory. This file is used by the server to manage the webapps.
+
+To view your new webapp in your webapps panel, you have to ask your system administrator to add the webapp to your user account. If you are the admin, launch the users webapp to associate the new webapp to user account.
+
