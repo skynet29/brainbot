@@ -27,3 +27,18 @@ Services are javascript object which are instanciated automatically by the frame
 
 Services may be configured at webapp startup in the **configReady** function before any controls creation.
 
+## A word to the files tree
+
+the sources of the front-end are located in the **src** directory.
+The **dist** folder is the result of the build which is based on GULP task runner.
+
+The sources of the Webapp are located in the **src/pages** directory.
+The sources of the common controls libraries are located in the **src/controls** directory.
+The sources of the common services library are located in the **src/services** directory.
+
+
+# Create a new Webapp
+
+To create a new Webapp, first create a new folder in the **src/pages** directory.
+
+In this directory, create a new javascript file with the following code:
