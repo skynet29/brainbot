@@ -96,4 +96,4 @@ To publish your webapp in the system, you have to tape the following command in 
 ````shell
 npm install
 ````
-This command regenerate the **config.json** file located in the **config** directory. This is used by the server to manage the webapps.
+This command regenerate the **webapps.json** file located in the **config** directory. This file is used by the server to manage the webapps.
