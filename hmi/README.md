@@ -27,7 +27,7 @@ Services are javascript object which are instanciated automatically by the frame
 
 Services may be configured at webapp startup in the **configReady** function before any controls creation.
 
-## A word to the files tree
+## A word about files tree
 
 the sources of the front-end are located in the **src** directory.
 The **dist** folder is the result of the build which is based on **GULP** task runner.
