@@ -257,5 +257,5 @@ $$.registerControlEx('MyControl4', {
 })
 ````
 
-To add custom parameter, add the name to the **props** object and export the setter function in the **this** in the constructor function. The **val** attribute define the default value of the parameter if the parameter is not set in the HTML.
+To add custom parameter, add the name to the **props** object and export the setter function in the **this** object in the constructor function. The **val** attribute define the default value of the parameter if the parameter is not set in the HTML.
 
