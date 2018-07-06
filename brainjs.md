@@ -76,7 +76,7 @@ ViewController is based on the excellent jQuery library. jQuery is bundeled in t
 
 # Using controls
 
-To use a control in your HTML, add a **bn-control** parameter to an HTML tag depending of the control type with the name of the control de to be create and optionally a **bn-options** parameter to specify controls options. The value of the options parameter must be an object declared in the viewControler data. This object is passed to the control constructor function.
+To use a control in your HTML, add a **bn-control** parameter to an HTML tag depending of the control type (most of the time a **div** tag) with the name of the control to create and optionally a **bn-options** parameter to specify controls options. The value of the options parameter must be an object declared in the viewControler data. This object is passed to the control constructor function.
 
 Example 1 with bn-options
 
