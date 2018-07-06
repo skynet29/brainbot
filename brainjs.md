@@ -76,7 +76,7 @@ ViewController is based on the excellent jQuery library. jQuery is bundeled in t
 
 # Using controls
 
-To declare in your HTML, add a bn-control parameter to an HTML tag depending of the control type with the name of the control de to create and optionally a bn-options parameter to specify controls options.
+To use a control in your HTML, add a bn-control parameter to an HTML tag depending of the control type with the name of the control de to be create and optionally a bn-options parameter to specify controls options.
 
 Example
 
