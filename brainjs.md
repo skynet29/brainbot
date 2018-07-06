@@ -316,6 +316,6 @@ $$.configReady(function(config) {
 
 	$$.configureService('WebSocketService', {id: 'ClientsMonitoring'})
 
-	…
+	...
 })
 ````
