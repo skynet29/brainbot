@@ -64,7 +64,6 @@ var ctrl = $$.viewController('#main', {
     }
   }
 })
-
 ````
 As you can see, the event handler must be defined in the **events** attribut of your model.
 
@@ -97,7 +96,6 @@ var ctrl = $$.viewController('#main', {
     }
   }
 })
-
 ````
 Another way to parameter your control is to use custom HTML parameters
 
@@ -108,7 +106,6 @@ HTML code
 <div id="main">
   <div bn-control="MyControl" data-title="Hello World"></div>  
 </div>  
-
 ````
 Note: custom parameter must use the **data-** prefix.
 
@@ -121,7 +118,6 @@ HTML code
 <div id="main">
   <div bn-control="MyControl" bn-data="title: myTitle"></div>  
 </div>  
-
 ````
 
 Javascript code
@@ -131,7 +127,7 @@ var ctrl = $$.viewController('#main', {
     myTitle: 'Hello World'
   }
 })
-
+````
 
 
 
