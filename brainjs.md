@@ -224,3 +224,37 @@ $(function() {
   ctrl.scope.myCtrl.setName('Hello')	
 })
 ````
+
+# control with custom parameters
+
+Javascript code (mycontrol3.js file)
+````javascript
+$$.registerControlEx('MyControl4', {
+
+	props: {
+		roll: {val: 0, set: 'setRoll'},
+		pitch: {val: 0, set: 'setPitch'}
+	},
+	init: function(elt, options) {
+		
+		const ctrl = $$.viewControler(elt, {
+			data: {
+				roll: options.roll,
+				pitch: options.pitch
+			}
+			
+		})
+	
+		this.setRoll = function(roll) {
+			ctrl.setData({roll})
+		}
+		
+		this.setPitch = function(pitch) {
+			ctrl.setData({pitch})
+		}		
+	}
+		     
+})
+````
+
+To add custom parameter, add the name to the **props** object and export the setter function in the **this** in the constructor function.
