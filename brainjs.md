@@ -227,7 +227,7 @@ $(function() {
 
 # control with custom parameters
 
-Javascript code (mycontrol3.js file)
+Javascript code (mycontrol4.js file)
 ````javascript
 $$.registerControlEx('MyControl4', {
 
