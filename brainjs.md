@@ -259,3 +259,29 @@ $$.registerControlEx('MyControl4', {
 
 To add custom parameter, add the name to the **props** object and export the setter function in the **this** object in the constructor function. The **val** attribute define the default value of the parameter if the parameter is not set in the HTML.
 
+# Specific interface function
+
+Certain interface name have a specific meaning.
+
+The **dipose** function name is called when present by the framework when the HTML tag associated to the control is destroyed.
+It is the opportunity for your control to clean up its data (stop running timers, unregister websocket topic, etc...)
+
+Example of code:
+````javascript
+$$.registerControlEx(‘MyControl5’, {
+	deps: ['WebSocketService'],
+	init: function(elt, options, client) 	{
+
+		function onLauncherStatus(msg) {
+			...
+		}
+		client.register('launcherStatus', true, onLauncherStatus)
+
+		this.dispose = function() {
+			client.unregister('launcherStatus', onLauncherStatus)
+		}
+	}
+})
+````
+
+If you want to create a control which has the same behavior as HTML input tag (input, select, etc..), your control has to export a **setValue** and **getValue** function.
