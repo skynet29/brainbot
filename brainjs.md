@@ -208,7 +208,7 @@ $$.registerControlEx('MyControl3', {
 
 Exported function has to be added to the **this** object.
 
-To access an interface control use the jQuery **interface** function or use the **bn-iface** to bind the interface to your controler scope object.
+To access an interface control use the jQuery **interface** function or use the **bn-iface** directive to bind the interface to your controler scope object.
 
 ````html
 <div id="main">
