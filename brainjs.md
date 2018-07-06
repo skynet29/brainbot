@@ -129,6 +129,59 @@ var ctrl = $$.viewController('#main', {
 })
 ````
 
+# Create a new control
+
+To create a new control, use the framework **registerControl** or **registerControlEx** function:
+
+Javascript code (file mycontrol.js)
+
+````javascript
+$$.registerControl('MyControl', function(elt, options) {
+  const title = options.title || 'No title!!'
+  
+  elt.append(`<h1>${title}</h1>`)
+})
+````
+
+**elt** is a jQuery object of the HTML tag with bn-control directive.
+
+As you can see, you do not have to use viewControler. Here we use ES6 template string.
 
 
+# Create a control using services
 
+Here you are creating a control which use the HTTP service to retrieve data from the server.
+
+Javascript code (file mycontrol2.js)
+````javascript
+$$.registerControlEx('MyControl', {
+  deps: ['HttpService'],
+  init: function(elt, options, http) {
+    var ctrl = $$.viewControler(elt, {
+      data: {
+        users: []
+      }
+    })
+      
+     http.get('/api/users').then(function(users) {
+        ctrl.setData({users})
+      })			
+    }
+
+  }
+  
+})
+````
+
+The **deps** field is an string array of service name. Services are automatically injected by the framework in the control constructor (init function).
+
+HTML file (mycontrol2.html)
+ 
+````html
+<div>
+  <h2>Users<h2>
+  <ul bn-each=“user of users">
+    <li bn-text=“user”></li>
+  </ul>
+</div>
+````
