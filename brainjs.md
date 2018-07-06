@@ -73,3 +73,32 @@ As you can see, the event handler must be defined in the **events** attribut of 
 To get started, see the examples on <a href="https://codepen.io/collection/AKgVOW" target="_blank">my codepen page</a>  
 
 ViewController is based on the excellent jQuery library. jQuery is bundeled in the file view.js in the hmi/dist folder.
+
+# Using controls
+
+To declare in your HTML, add a bn-control parameter to an HTML tag depending of the control type with the name of the control de to create and optionally a bn-options parameter to specify controls options.
+
+Example
+
+HTML code
+````html
+<div id="main">
+  <div bn-control="MyControl" bn-options="myCtrlOptions"></div>  
+</div>  
+
+````
+
+Javascript code
+````javascript
+var ctrl = $$.viewController('#main', {
+  data: {
+    myCtrlOptions: {
+      title: 'Hello World'
+    }
+  }
+})
+
+````
+
+
+
