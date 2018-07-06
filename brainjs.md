@@ -112,7 +112,7 @@ HTML code
 ````
 Note: custom parameter must use the **data-** prefix.
 
-If you want tu use a binding to your view control:
+If you want tu use a binding to your view control, use the **bn-data** directive:
 
 Example 3 with dynamic custom parameter
 
