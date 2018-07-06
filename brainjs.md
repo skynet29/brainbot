@@ -29,7 +29,7 @@ HTML code
 
 Javascript code
 ````javascript
-var ctrl = MDZ.viewController('#main', {
+var ctrl = $$.viewController('#main', {
   data: {
     name:'Marc'
   }
@@ -48,7 +48,7 @@ HTML code
 
 Javascript code
 ````javascript
-var ctrl = MDZ.viewController('#main', {
+var ctrl = $$.viewController('#main', {
   data: {
     name:'Marc',
     color:'black'
