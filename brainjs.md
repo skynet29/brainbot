@@ -73,7 +73,9 @@ To get started, see the examples on <a href="https://codepen.io/collection/AKgVO
 
 ViewController is based on the excellent jQuery library. jQuery is bundeled in the file view.js in the hmi/dist folder.
 
-# Using controls
+# Controls
+
+## Using controls
 
 To use a control in your HTML, add a **bn-control** parameter to an HTML tag depending of the control type (most of the time a **div** tag) with the name of the control to create and optionally a **bn-options** parameter to specify controls options. The value of the options parameter must be an object declared in the viewControler data. This object is passed to the control constructor function.
 
@@ -129,7 +131,7 @@ var ctrl = $$.viewController('#main', {
 })
 ````
 
-# Create a new control
+## Create a new control
 
 To create a new control, use the framework **registerControl** or **registerControlEx** function:
 
@@ -148,7 +150,7 @@ $$.registerControl('MyControl', function(elt, options) {
 As you can see, you do not have to use viewControler. Here we use ES6 template string.
 
 
-# Create a control using services
+## Create a control using services
 
 Here you are creating a control which use the HTTP service to retrieve data from the server.
 
@@ -186,7 +188,7 @@ HTML file (mycontrol2.html)
 </div>
 ````
 
-# control with an external interface
+## control with an external interface
 
 Javascript code (mycontrol3.js file)
 ````javascript
@@ -225,7 +227,7 @@ $(function() {
 })
 ````
 
-# control with custom parameters
+## control with custom parameters
 
 Javascript code (mycontrol4.js file)
 ````javascript
@@ -259,7 +261,7 @@ $$.registerControlEx('MyControl4', {
 
 To add custom parameter, add the name to the **props** object and export the setter function in the **this** object in the constructor function. The **val** attribute define the default value of the parameter if the parameter is not set in the HTML.
 
-# Specific interface function
+## control specific interface function
 
 Certain interface name have a specific meaning.
 
@@ -285,3 +287,35 @@ $$.registerControlEx(‘MyControl5’, {
 ````
 
 If you want to create a control which has the same behavior as HTML input tag (input, select, etc..), your control has to export a **setValue** and **getValue** function.
+
+# Services
+
+## Create a new service
+
+To create a new service, the framework porvides the **registerService** function.
+````javascript
+$$.registerService('UsersService', ['HttpService'], function(http) {
+	return {
+		getUsers: function() {
+			return http.get('/api/users')
+		}
+	}
+})
+````
+
+the first argument id the service name, the second a string array of service dependancies and the last is a function which must return an object which provides the service.
+
+Like controls, services use dependancies injection mechanism.
+
+## Configure a service
+
+To configure a service, use the framework **configureService** function.
+
+````javascript
+$$.configReady(function(config) {
+
+	$$.configureService('WebSocketService', {id: 'ClientsMonitoring'})
+
+	…
+})
+````
