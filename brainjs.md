@@ -185,3 +185,42 @@ HTML file (mycontrol2.html)
   </ul>
 </div>
 ````
+
+# control with an external interface
+
+Javascript code (mycontrol3.js file)
+````javascript
+$$.registerControlEx('MyControl3', {
+  init: function(elt, options) {
+		
+    elt.append(`<label>Name</label><input type="text">`)
+
+    this.getName = function() {
+      return elt.find('input').val()
+    }
+
+    this.setName = function(value) {
+      elt.find('input').val(value)
+    }   
+  }    
+})
+````
+
+Exported function has to be added to the **this** object.
+
+To access an interface control use the jQuery interface function or use the **bn-iface** to bind the interface to your controler scope object.
+
+````html
+<div id="main">
+  <div bn-control="MyControl3" bn-iface="myCtrl"></div>
+</div>
+````
+
+````javascript
+$(function() {
+
+  var ctrl = $$.viewControler('#main')
+  
+  ctrl.scope.myCtrl.setName('Hello')	
+})
+````
