@@ -1,7 +1,0 @@
-{
-	"tileIcon": "fa fa-image fa-2x",
-	"tileName": "Photo",
-	"tileColor": "w3-red",
-	"title": "Photo",
-	"styles": ["app.css"]
-}

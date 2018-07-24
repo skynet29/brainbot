@@ -1,0 +1,8 @@
+{
+	"styles": ["app.css", "/controls/sys.css"],
+	"tileColor": "w3-green",
+	"tileIcon": "fa fa-2x fa-users",
+	"title": "Users Managment",
+	"scripts": ["/controls/sys.js"],
+	"log": true	
+}

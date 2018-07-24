@@ -1,0 +1,15 @@
+.mainPanel {
+	display: flex;
+	flex-direction: row;
+}
+
+.mainPanel > div {
+	flex: 1;
+	margin: 20px;
+	padding: 10px;
+}
+
+
+
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsImZpbGUiOiJhcHAuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1haW5QYW5lbCB7XHJcblx0ZGlzcGxheTogZmxleDtcclxuXHRmbGV4LWRpcmVjdGlvbjogcm93O1xyXG59XHJcblxyXG4ubWFpblBhbmVsID4gZGl2IHtcclxuXHRmbGV4OiAxO1xyXG5cdG1hcmdpbjogMjBweDtcclxuXHRwYWRkaW5nOiAxMHB4O1xyXG59XHJcblxyXG5cclxuXHJcbiJdfQ== */

@@ -1,7 +1,0 @@
-{
-	"scripts": ["/controls/media.js", "/controls/ui.js", "/tree.js"],
-	"tileIcon": "fa fa-camera fa-2x",
-	"tileName": "Camera",
-	"tileColor": "w3-green",
-	"title": "Camera"
-}

@@ -8,7 +8,7 @@
 
 		"agents": {
 			"master": {"script": "master.js"},
-			"server": {"script": "hmi/server.js", "start": "auto"},
+			"server": {"script": "hmi/back/server.js", "start": "auto"},
 			"shapeAgent": {"script": "agents/shapeAgent.js", "start": "manual"},			
 			"drone": {"script": "agents/drone.js", "start": "manual"},
 			"radar": {"script": "agents/radar.js", "start": "manual"},

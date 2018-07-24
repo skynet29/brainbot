@@ -1,0 +1,13 @@
+.mainPanel {
+	display: flex;
+	flex-direction: row;
+}
+
+.mainPanel > div {
+	flex: 1;
+	margin: 20px;
+	padding: 10px;
+}
+
+
+

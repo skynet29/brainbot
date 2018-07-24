@@ -30,7 +30,8 @@
     "express-session": "^1.15.6",
     "forever-monitor": "^1.7.1",
     "mongodb": "^3.0.10",
-    "nodejs-websocket": "^1.7.1"
+    "nodejs-websocket": "^1.7.1",
+    "session-file-store": "^1.2.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

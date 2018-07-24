@@ -1,0 +1,582 @@
+{
+    "agents": {
+        "props": {
+            "title": "Agents Monitoring",
+            "desc": "Agent Monitoring",
+            "tileIcon": "fa fa-tasks fa-2x",
+            "log": true,
+            "scripts": [
+                "/controls/sys.js"
+            ]
+        }
+    },
+    "camera": {
+        "props": {
+            "scripts": [
+                "/controls/media.js",
+                "/controls/ui.js",
+                "/tree.js",
+                "/controls/file.js"
+            ],
+            "tileIcon": "fa fa-camera fa-2x",
+            "tileName": "Camera",
+            "tileColor": "w3-green",
+            "title": "Camera"
+        }
+    },
+    "clients": {
+        "props": {
+            "title": "Clients Monitoring",
+            "scripts": [
+                "/controls/sys.js"
+            ]
+        }
+    },
+    "doc": {
+        "props": {
+            "styles": [
+                "app.css"
+            ],
+            "scripts": [
+                "/controls/circular.js",
+                "/controls/flight.js",
+                "/controls/map.js",
+                "/controls/media.js",
+                "/controls/milsymbol.js",
+                "/controls/shapes.js",
+                "/controls/sys.js",
+                "/controls/ui.js"
+            ],
+            "tileIcon": "fa fa-2x fa-question"
+        }
+    },
+    "file": {
+        "props": {
+            "tileIcon": "fa fa-file fa-2x",
+            "tileName": "Files",
+            "tileColor": "w3-yellow",
+            "title": "Files Management",
+            "scripts": [
+                "/controls/file.js"
+            ]
+        }
+    },
+    "master": {
+        "props": {
+            "tileIcon": "fa fa-database fa-2x",
+            "title": "Master Monitoring",
+            "scripts": [
+                "/controls/sys.js"
+            ]
+        }
+    },
+    "parrot": {
+        "props": {
+            "scripts": [
+                "/controls/flight.js",
+                "/controls/ui.js",
+                "/nodecopter-client.js"
+            ],
+            "styles": [
+                "app.css"
+            ]
+        }
+    },
+    "photo": {
+        "props": {
+            "tileIcon": "fa fa-image fa-2x",
+            "tileName": "Photo",
+            "tileColor": "w3-red",
+            "title": "Photo",
+            "styles": [
+                "app.css"
+            ],
+            "scripts": [
+                "/controls/file.js"
+            ]
+        }
+    },
+    "routerTest": {
+        "props": {
+            "scripts": [
+                "/leaflet.js",
+                "/controls/sys.js",
+                "/controls/shapes.js",
+                "/controls/tactic.js"
+            ],
+            "styles": [
+                "/css/leaflet.css",
+                "/controls/tactic.css"
+            ],
+            "title": "Router Test"
+        }
+    },
+    "shapes": {
+        "props": {
+            "title": "Shapes Monitoring",
+            "scripts": [
+                "/controls/shapes.js"
+            ]
+        }
+    },
+    "tactic": {
+        "props": {
+            "scripts": [
+                "/controls/map.js",
+                "/controls/circular.js",
+                "/leaflet.js",
+                "/tween.js",
+                "/milsymbol.js"
+            ],
+            "styles": [
+                "/css/leaflet.css"
+            ],
+            "tileIcon": "fa fa-2x fa-globe",
+            "tileColor": "w3-red",
+            "title": "TacticView"
+        },
+        "configs": {
+            "ihm-loc": {
+                "map": {
+                    "attributionControl": false,
+                    "zoomControl": true,
+                    "center": [
+                        48.3583,
+                        -4.53417
+                    ],
+                    "zoom": 13
+                },
+                "tileLayer": {
+                    "maxZoom": 19,
+                    "urlTemplate": "/maps/{z}/{x}/{y}.png"
+                },
+                "controls": {
+                    "scale": {
+                        "imperial": false,
+                        "position": "bottomright"
+                    },
+                    "coordinates": {
+                        "position": "bottomleft",
+                        "useLatLngOrder": true,
+                        "enableUserInput": false,
+                        "decimals": 5
+                    },
+                    "layers": {
+                        "default": {
+                            "label": "Routes",
+                            "visible": true,
+                            "cluster": false
+                        },
+                        "mission": {
+                            "label": "Stops",
+                            "visible": true,
+                            "minZoom": 15
+                        },
+                        "vehicule": {
+                            "label": "Vehicule",
+                            "visible": true
+                        }
+                    },
+                    "graticule": {
+                        "color": "red"
+                    }
+                },
+                "contextmenuItems": [
+                    {
+                        "text": "Init drone poistion",
+                        "topic": "initPos"
+                    },
+                    {
+                        "text": "Target",
+                        "topic": "goTarget"
+                    },
+                    {
+                        "text": "Start Bus",
+                        "topic": "startBus"
+                    },
+                    {
+                        "separator": true
+                    },
+                    {
+                        "text": "Center map here",
+                        "action": "centerMap"
+                    }
+                ],
+                "plugins": {
+                    "ShapeDecoder": {},
+                    "ShapeEditor": {
+                        "draw": {
+                            "circle": {
+                                "feet": false
+                            },
+                            "polyline": true,
+                            "rectangle": true,
+                            "marker": true
+                        },
+                        "edit": {
+                            "featureGroup": "default"
+                        }
+                    },
+                    "CenterMap": {},
+                    "CircularMenu": {
+                        "menus": [
+                            {
+                                "text": "",
+                                "action": "toto"
+                            },
+                            {
+                                "text": "",
+                                "color": "blue"
+                            }
+                        ],
+                        "triggerPos": {
+                            "left": 200,
+                            "top": 200
+                        }
+                    },
+                    "ObjectCircularMenu": {
+                        "menus": [
+                            {
+                                "text": "Red",
+                                "color": "red"
+                            },
+                            {
+                                "text": "Green",
+                                "color": "green"
+                            },
+                            {
+                                "text": "Cyan",
+                                "color": "cyan"
+                            },
+                            {
+                                "text": "Blue",
+                                "color": "blue"
+                            }
+                        ],
+                        "innerRadius": 40,
+                        "radius": 100,
+                        "iconPos": 70
+                    },
+                    "PanelInfo": {}
+                }
+            },
+            "ihm": {
+                "map": {
+                    "attributionControl": false,
+                    "zoomControl": true,
+                    "center": [
+                        48.3583,
+                        -4.53417
+                    ],
+                    "zoom": 13
+                },
+                "tileLayer": {
+                    "maxZoom": 19,
+                    "urlTemplate": "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+                },
+                "controls": {
+                    "scale": {
+                        "imperial": false,
+                        "position": "bottomright"
+                    },
+                    "coordinates": {
+                        "position": "bottomleft",
+                        "useLatLngOrder": true,
+                        "enableUserInput": false,
+                        "decimals": 5
+                    },
+                    "layers": {
+                        "mission": {
+                            "label": "Mission",
+                            "visible": true
+                        },
+                        "default": {
+                            "label": "Default",
+                            "visible": true
+                        },
+                        "vehicule": {
+                            "label": "Vehicule",
+                            "visible": true
+                        }
+                    }
+                },
+                "contextmenuItems": [
+                    {
+                        "text": "Init drone poistion",
+                        "topic": "initPos"
+                    },
+                    {
+                        "text": "Target",
+                        "topic": "goTarget"
+                    },
+                    {
+                        "text": "Start Bus",
+                        "topic": "startBus"
+                    },
+                    {
+                        "separator": true
+                    },
+                    {
+                        "text": "Center map here",
+                        "action": "centerMap"
+                    }
+                ],
+                "plugins": {
+                    "ShapeDecoder": {},
+                    "ShapeEditor": {
+                        "draw": {
+                            "circle": {
+                                "feet": false
+                            },
+                            "polyline": true,
+                            "rectangle": true,
+                            "marker": true
+                        },
+                        "edit": {
+                            "featureGroup": "default"
+                        }
+                    },
+                    "CenterMap": {},
+                    "CircularMenu": {
+                        "menus": [
+                            {
+                                "text": "",
+                                "action": "toto"
+                            },
+                            {
+                                "text": "",
+                                "color": "blue"
+                            }
+                        ],
+                        "triggerPos": {
+                            "left": 200,
+                            "top": 200
+                        }
+                    },
+                    "ObjectCircularMenu": {
+                        "menus": [
+                            {
+                                "text": "Red",
+                                "color": "red"
+                            },
+                            {
+                                "text": "Green",
+                                "color": "green"
+                            },
+                            {
+                                "text": "Cyan",
+                                "color": "cyan"
+                            },
+                            {
+                                "text": "Blue",
+                                "color": "blue"
+                            }
+                        ],
+                        "innerRadius": 40,
+                        "radius": 100,
+                        "iconPos": 70
+                    },
+                    "PanelInfo": {}
+                }
+            },
+            "ihm2-loc": {
+                "map": {
+                    "attributionControl": false,
+                    "zoomControl": true,
+                    "center": [
+                        48.3583,
+                        -4.53417
+                    ],
+                    "zoom": 13
+                },
+                "tileLayer": {
+                    "maxZoom": 19,
+                    "urlTemplate": "/maps/{z}/{x}/{y}.png"
+                },
+                "controls": {
+                    "scale": {
+                        "imperial": false,
+                        "position": "bottomright"
+                    },
+                    "coordinates": {
+                        "position": "bottomleft",
+                        "useLatLngOrder": true,
+                        "enableUserInput": false,
+                        "decimals": 5
+                    },
+                    "layers": {
+                        "mission": {
+                            "label": "Mission",
+                            "visible": true
+                        },
+                        "default": {
+                            "label": "Default",
+                            "visible": true
+                        },
+                        "vehicule": {
+                            "label": "Vehicule",
+                            "visible": true
+                        }
+                    }
+                },
+                "contextmenuItems": [
+                    {
+                        "text": "Start Bus",
+                        "topic": "startBus"
+                    },
+                    {
+                        "text": "Center map here",
+                        "action": "centerMap"
+                    }
+                ],
+                "plugins": {
+                    "ShapeDecoder": {},
+                    "CenterMap": {}
+                }
+            },
+            "ihm2": {
+                "map": {
+                    "attributionControl": false,
+                    "zoomControl": true,
+                    "center": [
+                        48.3583,
+                        -4.53417
+                    ],
+                    "zoom": 13
+                },
+                "tileLayer": {
+                    "maxZoom": 19,
+                    "urlTemplate": "http://{s}.tile.osm.org/{z}/{x}/{y}.png"
+                },
+                "controls": {
+                    "scale": {
+                        "imperial": false,
+                        "position": "bottomright"
+                    },
+                    "coordinates": {
+                        "position": "bottomleft",
+                        "useLatLngOrder": true,
+                        "enableUserInput": false,
+                        "decimals": 5
+                    },
+                    "layers": {
+                        "mission": {
+                            "label": "Mission",
+                            "visible": true
+                        },
+                        "default": {
+                            "label": "Default",
+                            "visible": true
+                        },
+                        "vehicule": {
+                            "label": "Vehicule",
+                            "visible": true
+                        }
+                    }
+                },
+                "contextmenuItems": [
+                    {
+                        "text": "Start Bus",
+                        "topic": "startBus"
+                    },
+                    {
+                        "text": "Center map here",
+                        "action": "centerMap"
+                    }
+                ],
+                "plugins": {
+                    "ShapeDecoder": {},
+                    "CenterMap": {}
+                }
+            }
+        }
+    },
+    "test": {
+        "props": {
+            "styles": [
+                "app.css",
+                "/controls/circular.css"
+            ],
+            "title": "Form Test",
+            "scripts": [
+                "/controls/circular.js",
+                "/tween.js"
+            ]
+        }
+    },
+    "test-aframe": {
+        "props": {
+            "title": "VR Test",
+            "scripts": [
+                "/aframe.js"
+            ]
+        }
+    },
+    "test-controls": {
+        "props": {
+            "scripts": [
+                "/tree.js",
+                "/controls/ui.js"
+            ],
+            "title": "Demo Controls"
+        }
+    },
+    "test-editor": {
+        "props": {
+            "scripts": [
+                "/controls/ui.js"
+            ]
+        }
+    },
+    "test-flight": {
+        "props": {
+            "scripts": [
+                "/controls/flight.js",
+                "/controls/ui.js"
+            ]
+        }
+    },
+    "test-ol": {
+        "props": {
+            "scripts": [
+                "/ol.js",
+                "/milsymbol.js"
+            ],
+            "styles": [
+                "app.css"
+            ]
+        }
+    },
+    "test-service": {
+        "props": {
+            "styles": [
+                "app.css"
+            ],
+            "title": "Demo Services"
+        }
+    },
+    "test2": {
+        "props": {
+            "title": "MIL-STD-2525C",
+            "scripts": [
+                "/controls/milsymbol.js",
+                "/milsymbol.js"
+            ]
+        }
+    },
+    "users": {
+        "props": {
+            "styles": [
+                "app.css",
+                "/controls/sys.css"
+            ],
+            "tileColor": "w3-green",
+            "tileIcon": "fa fa-2x fa-users",
+            "title": "Users Managment",
+            "scripts": [
+                "/controls/sys.js"
+            ],
+            "log": true
+        }
+    }
+}

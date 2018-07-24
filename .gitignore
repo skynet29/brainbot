@@ -3,7 +3,8 @@
 _FOSSIL_
 node_modules
 logs
-users
+hmi/back/config/users
+hmi/back/config/users.json
 db
 
 
