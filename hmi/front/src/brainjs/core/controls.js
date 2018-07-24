@@ -40,41 +40,35 @@ $$.createControl = function(controlName, elt) {
 			
 			if (typeof ctrl.fn == 'function') {
 				var args = [elt].concat(ctrl.deps)
-				var copyOptions = $.extend(true, {}, elt.getOptions())
+				var defaultOptions = $.extend(true, {}, elt.data('$options'))
 				console.log(`[Core] instance control '${controlName}'`)
 				ctrl.fn.apply(iface, args)	
-				iface.options = copyOptions
+				iface.options = defaultOptions
 							
 			}
 			else if (typeof ctrl.fn == 'object') {
 				var init = ctrl.fn.init
 				var props = ctrl.fn.props || {}
-				var ctx = {}
-				var defaultOptions = ctrl.fn.options || {}
+				var defaultOptions = $.extend({}, ctrl.fn.options, elt.data('$options'))
+
+				var options = {}
+
+				for(var o in defaultOptions) {
+					options[o] = (elt.data(o) != undefined) ? elt.data(o) : defaultOptions[o]
+				}
+
+				for(var p in props) {
+					options[p] = (elt.data(p) != undefined) ? elt.data(p) : props[p].val
+				}
+
+				//console.log('Computed Options', options)
 
 				if (typeof init == 'function') {
-
-					var initValues = {}
-					for(var k in props) {
-						ctx[k] = props[k].val
-					}
-
-					var options = $.extend({}, defaultOptions, elt.getOptions(ctx))
-
-					//console.log(`[Core] options`, options)
-					var trueOptions = {}
-					for(var k in options) {
-						if (!(k in props)) {
-							trueOptions[k] = options[k]
-						}
-					}
-
-					var copyOptions = $.extend(true, {}, trueOptions)
 
 					var args = [elt, options].concat(ctrl.deps)
 					console.log(`[Core] instance control '${controlName}' with options`, options)
 					init.apply(iface, args)
-					iface.options = copyOptions
+					iface.options = options
 					iface.events = ctrl.fn.events
 
 					if (Object.keys(props).length != 0) {
@@ -85,23 +79,23 @@ $$.createControl = function(controlName, elt) {
 								var setter = iface[setter]
 							}
 							if (typeof setter == 'function') {
-								setter.call(ctx, value)
+								setter.call(null, value)
 							}
 							
-							ctx[name] = value
+							iface.options[name] = value
 						}
 
 						iface.props = function() {
 							var ret = {}
 							for(var k in props) {
-								ret[k] = ctx[k]
+								ret[k] = iface.options[k]
 
 								var getter = props[k].get
 								if (typeof getter == 'string') {
 									getter = iface[getter]											
 								}
 								if (typeof getter == 'function') {
-									ret[k] = getter.call(ctx)
+									ret[k] = getter.call(null)
 								}
 							}
 							return ret

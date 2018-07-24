@@ -2,8 +2,8 @@
 
 	$$.registerControlEx('NavbarControl', {
 
-		props: {
-			activeColor: {val: 'w3-green'}
+		options: {
+			activeColor: 'w3-green'
 		},
 
 		init: function(elt, options) {

@@ -1,9 +1,9 @@
 $$.registerControlEx('FileControl', {
 	deps: ['FileService'], 
-	props: {
-		toolbar: {val: true},
-		imageOnly: {val: false},
-		maxUploadSize: {val: 2*1024*2014} // 2 Mo		
+	options: {
+		toolbar: true,
+		imageOnly: false,
+		maxUploadSize: 2*1024*2014 // 2 Mo		
 	},
 	events: 'fileClick',
 	iface: 'getFiles()',

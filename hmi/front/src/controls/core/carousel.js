@@ -3,13 +3,17 @@
 	$$.registerControlEx('CarouselControl', {
 
 		props: {
-			width: {val: 300},
-			height: {val: 200},
-			animateDelay: {val: 1000},
+
 			index: {
 				val: 0,
 				set: 'setIndex'
 			} 
+		},
+		options: {
+			width: 300,
+			height: 200,
+			animateDelay: 1000,
+		
 		},
 		iface: 'setIndex(idx);refresh()',
 

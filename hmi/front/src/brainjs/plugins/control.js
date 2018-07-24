@@ -1,23 +1,6 @@
 (function() {
 	
 
-	$.fn.getOptions = function(defaultValues) {
-
-		var values = defaultValues || {}
-
-		var options = this.data('$options')
-		if (typeof options != 'object') {
-			options = {}
-		}	
-
-		var paramsValue = {}
-		for(var k in values) {
-			paramsValue[k] = this.data(k)
-		}
-
-		return $.extend(values, options, paramsValue)
-			
-	}
 
 	$.fn.getParentInterface = function(parentCtrlName) {
 		var parent = this.parent()

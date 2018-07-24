@@ -32,8 +32,8 @@
 
 	$$.registerControlEx('RouterControl', {
 
-		props: {
-			routes: {val: []}
+		options: {
+			routes: []
 		},
 		init: function(elt, options) {
 

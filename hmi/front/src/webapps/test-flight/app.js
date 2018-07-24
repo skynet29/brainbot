@@ -9,7 +9,11 @@ $$.configReady(function(config) {
 			roll: 10,
 			pitch: 10,
 			altitude: 50,
-			speed: 5
+			speed: 5,
+
+			options: {
+				earthColor: 'green'
+			}
 		}
 
 	})

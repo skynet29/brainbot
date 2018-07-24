@@ -1,13 +1,15 @@
 $$.registerControlEx('PictureCarouselControl', {
 
 	props: {
-		width: {val: 300},
-		height: {val: 200},
-		animateDelay: {val: 1000},
 		index: {val: 0, set: 'setIndex'},
-		images: {val: [], set: 'setImages'},
-		color: {val: 'yellow'}
+		images: {val: [], set: 'setImages'}
 	},
+	options: {
+		width: 300,
+		height: 200,
+		animateDelay: 1000,
+		color: 'yellow'
+	},	
 
 	iface: 'setImages(images);setIndex(idx)',
 

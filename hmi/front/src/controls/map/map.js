@@ -565,7 +565,7 @@
 			}
 
 
-			configure(elt.getOptions())
+			configure(options)
 
 			this.updateShape = updateShape
 			this.removeShape = removeShape

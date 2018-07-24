@@ -1,9 +1,9 @@
 
 $$.registerControlEx('HeaderControl', {
 	deps: ['WebSocketService'],
-	props: {
-		title: {val: 'Hello World'},
-		userName: {val: 'unknown'}
+	options: {
+		title: 'Hello World',
+		userName: 'unknown'
 	},
 	init: function(elt, options, client) {
 
