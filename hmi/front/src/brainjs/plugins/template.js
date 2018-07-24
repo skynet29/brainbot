@@ -110,6 +110,7 @@
 					itemData[iter] = item
 					//var $item = $(ctx.template)
 					var $item = ctx.template.clone()
+					console.log('$item', $item.get(0).outerHTML)
 					$item.processUI(itemData)
 					ctx.elt.append($item)
 				})
@@ -251,7 +252,7 @@
 			this.bnFind(k, true, function(elt, dirValue) {
 				var template
 				if (k == 'bn-each') {
-					template = elt.children().remove()//.get(0).outerHTML
+					template = elt.children().remove().clone()//.get(0).outerHTML
 					//console.log('template', template)
 				}
 				if (k == 'bn-val') {

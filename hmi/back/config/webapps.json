@@ -45,7 +45,8 @@
                 "/controls/milsymbol.js",
                 "/controls/shapes.js",
                 "/controls/sys.js",
-                "/controls/ui.js"
+                "/controls/ui.js",
+                "/controls/file.js"
             ],
             "tileIcon": "fa fa-2x fa-question"
         }
