@@ -34,7 +34,7 @@
 
 
 		map.on('zoomend', () => {
-			panelInfo.processTemplate({zoomLevel: map.getZoom()})
+			panelInfo.updateTemplate(ctx, {zoomLevel: map.getZoom()})
 		})
 
 		mapView.events.on('objectClicked', function(obj) {
