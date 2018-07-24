@@ -10,7 +10,7 @@ $$.registerControl('$MainControl', function(elt) {
 			})
 		})
 	}
-	console.log('libs', libs)
+	//console.log('libs', libs)
 
 	var ctrl = $$.viewController(elt, {
 		template: {gulp_inject: './main.html'},

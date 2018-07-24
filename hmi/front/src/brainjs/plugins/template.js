@@ -110,7 +110,6 @@
 					itemData[iter] = item
 					//var $item = $(ctx.template)
 					var $item = ctx.template.clone()
-					console.log('$item', $item.get(0).outerHTML)
 					$item.processUI(itemData)
 					ctx.elt.append($item)
 				})
