@@ -123,7 +123,7 @@ $$.createControl = function(controlName, elt) {
 
 	}
 	else {
-		console.warn(`[Core] control '${controlName}' is not registered`)
+		throw(`[Core] control '${controlName}' is not registered`)
 	}
 }
 

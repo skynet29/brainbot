@@ -51,7 +51,18 @@ $(function() {
 			$$.configureService('WebSocketService', {id: appName + '.' + config.$userName + '.'})
 			$('body').processControls() // process HeaderControl
 			
-			fnConfigReady(config)
+			try {
+				fnConfigReady(config)
+			}
+			catch(e) {
+				var html = `
+					<div class="w3-container">
+						<p class="w3-text-red">${e}</p>
+					</div>
+				`
+				$('body').html(html)
+			}
+			
 			
 			processRoute()
 		})

@@ -25,8 +25,7 @@ $$.registerObject = function(domain, name, arg1, arg2) {
 		fn = arg2
 	}
 	if (typeof domain != 'string' || typeof name != 'string' || typeof fn == 'undefined' || !Array.isArray(deps)) {
-		console.warn('[Core] registerObject called with bad arguments')
-		return
+		throw('[Core] registerObject called with bad arguments')
 	} 
 	console.log(`[Core] register object '${domain}:${name}' with deps`, deps)
 	if (registeredObjects[domain] == undefined) {
@@ -63,7 +62,7 @@ $$.getServices = function(deps) {
 		}
 		else {
 			//srv.status = 'notregistered'
-			console.warn(`[Core] service '${depName}' is not registered`)
+			throw(`[Core] service '${depName}' is not registered`)
 		}
 
 	})
@@ -83,7 +82,7 @@ $$.configureService = function(name, config) {
 		srv.config = config
 	}
 	else {
-		console.warn(`[configureService] service '${name}' is not registered`)
+		throw(`[configureService] service '${name}' is not registered`)
 	}
 
 }
