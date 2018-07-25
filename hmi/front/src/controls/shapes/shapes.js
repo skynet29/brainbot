@@ -15,15 +15,14 @@
 						layer: 'Layer',
 						shapeType: 'Shape Type',
 						src: 'Source',
-						data: 'Data',
 						lastModif: 'Last Modified'
 					},
 					actions: {
-						'delete': 'fa fa-trash'
+						'delete': 'fa fa-trash',
+						'detail': 'fa fa-info'
 					}
 				},
 				nbMsg: 0,
-				dataVisible: false,
 				filters: {
 					name: '',
 					layer: ''
@@ -34,11 +33,7 @@
 				template: {gulp_inject: './shapes.html'},
 				data: model,
 				events: {
-					onShowData: function(ev) {
-						var dataVisible = $(this).prop('checked')
-						ctrl.setData({dataVisible})
-						
-					},
+
 
 					onRemoveAll: function(ev) {
 						for(let shapeId in ctrl.scope.iface.getDisplayedDatas()) {
@@ -47,7 +42,15 @@
 					},
 					onItemAction: function(action, id) {
 						console.log('itemAction', id, action)
-						client.emit('mapViewAddShape.' + id)
+						if (action == 'delete') {
+							client.emit('mapViewAddShape.' + id)
+						}
+						if (action == 'detail') {
+							var msg = ctrl.scope.iface.getItem(id)
+							console.log('msg', msg)
+							var html = `<pre>${JSON.stringify(msg.data, null, 4)}</pre>`
+							$$.showAlert(html, 'Detail')
+						}
 					},
 					onFilterChange: function(ev) {
 						var field = $(this).data('filter')
@@ -57,16 +60,11 @@
 					}
 				},
 				watches: {
-					dataVisible: function(newValue) {
-						console.log('dataVisible has change:', newValue)
-						tbody.find('pre').bnVisible(newValue)
-					},
 
 					filters: function(newValue) {
 						console.log('filters has change:', newValue)
 						ctrl.scope.iface.setFilters(newValue)
 						updateShapeNumber()
-						tbody.find('pre').bnVisible(ctrl.model.dataVisible)					
 					}
 				},
 				init: function() {
@@ -86,15 +84,13 @@
 				var tokens = msg.id.split('.')
 				var layer = tokens[0]
 				var id = tokens[1]
-				var data = $(`<pre bn-prop="hidden: hidden" class="bn-no-margin">${JSON.stringify(msg.data, null, 4)}</pre>`)
-					.processTemplate({hidden: !ctrl.model.dataVisible})
 				return {
 					name: id,
 					layer: layer,
 					shapeType: msg.data.shape,
 					src: msg.src,
 					lastModif: new Date(msg.time).toLocaleString(),
-					data: data
+					data: msg.data
 				}
 			}
 

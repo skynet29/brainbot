@@ -7,6 +7,7 @@ $$.showAlert = function(text, title, callback) {
 				'ui-dialog-titlebar-close': 'no-close'
 			},
 			width: 'auto',
+			maxHeight: 400,
 			modal: true,
 			close: function() {
 				$(this).dialog('destroy')

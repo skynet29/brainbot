@@ -13,12 +13,13 @@
 					columns: {
 						'topic': 'Topic',
 						'src': 'Source',
-						'lastModif': 'Last Modified',
-						'data': 'Data'
+						'lastModif': 'Last Modified'
+					},
+					actions: {
+						'detail': 'fa fa-info'
 					}
 				},
-				nbMsg: 0,
-				dataVisible: false			
+				nbMsg: 0
 			}
 
 
@@ -28,18 +29,19 @@
 				data: model, 
 				events: 
 				{
-					onShowData: function(ev) {
-						console.log('onShowData')
-						model.dataVisible = $(this).prop('checked')
-						tbody.find('pre').bnVisible(model.dataVisible)
+					onItemAction: function(action, id) {
+						console.log('onItemAction', action, id)
+						var item = ctrl.scope.iface.getItem(id)
+						var html = `<pre>${JSON.stringify(item.data, null, 4)}</pre>`
+						$$.showAlert(html, 'Detail')
 					},
+
 					onFilterChange: function(ev) {
 						console.log('onFilterChange')
 						var filter = $(this).data('filter')
 						filters[filter] = $(this).val()
 						ctrl.scope.iface.setFilters(filters)
 						updateTopicNumber()
-						tbody.find('pre').bnVisible(model.dataVisible)				
 					}
 				}
 			})
@@ -69,14 +71,13 @@
 
 			
 			function getItemData(msg) {
-				var data = $(`<pre bn-prop="hidden: hidden" class="bn-no-margin">${JSON.stringify(msg.data, null, 4)}</pre>`)
-					.processTemplate({hidden: !model.dataVisible})
+
 
 				return {
 					topic: msg.topic,
 					src: msg.src,
 					lastModif: new Date(msg.time).toLocaleString(),
-					data: data			
+					data: msg.data			
 				}
 			}
 

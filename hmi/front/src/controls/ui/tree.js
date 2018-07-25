@@ -1,8 +1,8 @@
 $$.registerControlEx('TreeControl', {
 
 	deps: ['TreeCtrlService'], 
-	props: {
-		checkbox: {val: false}
+	options: {
+		checkbox: false
 	},
 	events: 'activate,contextMenuAction',
 	iface: 'getActiveNode();getRootNode();on(event, callback);moveUp(node);moveDown(node)',

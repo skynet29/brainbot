@@ -2,11 +2,11 @@
 
 $$.registerControlEx('SliderControl', {
 
-	props: {
-		max: {val: 100},
-		min: {val: 0}, 
-		orientation: {val: 'horizontal'},
-		range: {val: false}			
+	options: {
+		max: 100,
+		min: 0, 
+		orientation: 'horizontal',
+		range: false			
 	},
 	events: 'change,input',
 

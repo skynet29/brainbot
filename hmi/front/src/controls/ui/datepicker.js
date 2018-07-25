@@ -4,8 +4,8 @@
 
 
 	$$.registerControlEx('DatePickerControl', {
-		props: {
-			showButtonPanel: {val: false}
+		options: {
+			showButtonPanel: false
 		},
 		events: 'change',
 		init: function(elt, options) {

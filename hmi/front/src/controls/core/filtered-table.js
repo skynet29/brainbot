@@ -27,7 +27,7 @@
 
 	$$.registerControlEx('FilteredTableControl', {
 
-		iface: 'addItem(id, data);removeItem(id);removeAllItems();setFilters(filters);getDatas();getDisplayedDatas();on(event, callback)',
+		iface: `addItem(id, data);removeItem(id);removeAllItems();getItem(id);setFilters(filters);getDatas();getDisplayedDatas();on(event, callback)`,
 		events: 'itemAction',
 
 		init: function(elt, options) {
@@ -42,7 +42,7 @@
 				headers.push(`<th>Action</th>`)
 
 				var buttons = actions.map((action) => `<button data-action="${action.key}" class="w3-button"><i class="${action.value}"></i></button>`)
-				rows.push(`<td>${buttons}</td>`)
+				rows.push(`<td>${buttons.join('')}</td>`)
 			}
 
 			//console.log('rows', rows)
@@ -95,6 +95,10 @@
 						delete displayedItems[id]
 					}
 				}			
+			}
+
+			this.getItem = function(id) {
+				return datas[id]
 			}
 
 			this.removeAllItems = function() {

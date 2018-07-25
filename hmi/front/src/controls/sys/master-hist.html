@@ -6,9 +6,7 @@
 		</div>
 		<div>Messages Number:<span bn-text="nbMsg"></span></div>
 	</div>
-	<div class="bn-container">
-		<input type="checkbox" class="w3-check" bn-event="click: onShowData" bn-val="dataVisible"><label> Show Data</label>
-	</div>
 
-	<div bn-control="FilteredTableControl" bn-options="tableConfig" class="bn-flex-1 bn-no-overflow" bn-iface="iface">	
+
+	<div bn-control="FilteredTableControl" bn-options="tableConfig" class="bn-flex-1 bn-no-overflow" bn-iface="iface" bn-event="itemAction: onItemAction">	
 </div>
