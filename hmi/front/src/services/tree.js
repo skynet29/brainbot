@@ -4,7 +4,7 @@
 
 
 		if ($.ui.fancytree == undefined) {
-			console.warn(`[TreeCtrlService] Missing library dependancy 'tree.js'`)
+			throw(`[TreeCtrlService] Missing library dependancy 'tree.js'`)
 		}
 		else {
 			console.log('Fancytree version:', $.ui.fancytree.version)

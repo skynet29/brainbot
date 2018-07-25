@@ -5,7 +5,7 @@
 		var L = window.L
 
 		if (! L) {
-			console.warn(`[LeafletService] Missing library dependancy 'leaflet.js'`)
+			throw(`[LeafletService] Missing library dependancy 'leaflet.js'`)
 		}
 		else {
 			console.log('Leaflet version', L.version)

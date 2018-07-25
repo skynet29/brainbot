@@ -5,7 +5,7 @@
 		var ol = window.ol
 
 		if (! ol) {
-			console.warn(`[OpenLayerService] Missing library dependancy 'ol.j'`)
+			throw(`[OpenLayerService] Missing library dependancy 'ol.j'`)
 		}
 		else {
 			delete window.ol

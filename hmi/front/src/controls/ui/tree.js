@@ -34,9 +34,11 @@ $$.registerControlEx('TreeControl', {
 
 		elt.fancytree(options)
 
-		this.getActiveNode = function() {
+		function getActiveNode() {
 			return elt.fancytree('getActiveNode')
 		}
+
+		this.getActiveNode = getActiveNode
 
 		this.getRootNode = function() {
 			return elt.fancytree('getRootNode')
